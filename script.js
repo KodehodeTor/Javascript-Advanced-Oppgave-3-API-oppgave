@@ -13,3 +13,24 @@ const mtgapi = "https://mtgjson.com/api/v5/";
 const scryapi = "https://api.scryfall.com";
 
 const cardCont = document.querySelector("#cards");
+
+//Loop that goes through mtgapi
+for (let i = 0; i < mtgapi.length; i++) {
+  getData(mtgapi + `V${i}.json`);
+}
+
+//Async getData function
+
+async function getData(url) {
+  if (url === "https://api.scryfall.com") {
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => displayData(data))
+      .catch((err) => console.log(err));
+  } else {
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => displayData(data.data.cards))
+      .catch((err) => console.log(err));
+  }
+}
