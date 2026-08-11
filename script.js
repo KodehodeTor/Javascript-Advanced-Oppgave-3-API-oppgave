@@ -72,3 +72,31 @@ function createCard(cardInfo) {
 }
 
 // NOW TO APPEND THE CARDS PROPERLY WITH THEIR RESPECTED IMAGE!!!
+
+//GOAL : Make a filter towards legalities (like commander) and colors.
+//As well as order list for price in cardmarket EU trend 30 days
+//A top 10,20 or 50 list to check prices of your fav cards in the selected colors.
+
+// STRUCTURE:
+//color_identity: Array [W, B]
+//colors: Array [B, G, W, P, S, C]
+//legalities: commander: "legal" / "not_legal"
+//finishes: ['nonfoil]/['foil'] foil:false/true
+//prices: eur
+// :
+// null
+// eur_foil
+// :
+// null
+// tix
+// :
+// null
+// usd
+// :
+// null
+// usd_etched
+// :
+// null
+// usd_foil
+// :
+// null
