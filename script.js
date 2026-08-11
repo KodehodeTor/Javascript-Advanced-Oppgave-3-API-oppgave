@@ -28,7 +28,7 @@ async function getData(url) {
     fetch(url)
       .then((res) => res.json())
       .then((data) => displayData(data))
-         //Dersom vi bruker console.log istedenfor error så er det den informasjonen vi sender. (i konsoll)
+      //Dersom vi bruker console.log istedenfor error så er det den informasjonen vi sender. (i konsoll)
       .catch((err) => console.log(err));
   } else {
     fetch(url)
@@ -51,4 +51,16 @@ function displayData(data) {
   });
 }
 
-function 
+function createCard(cardInfo) {
+  const div = document.createElement("div");
+  div.className = "card";
+  div.style.borderColor = cardInfo.borderColor;
+
+  const p = document.createElement("p");
+  let textP = document.createTextNode(cardInfo.name || cardInfo.title);
+  p.append(textP);
+
+  div.appendChild(p);
+
+  cardCont.appendChild(div);
+}
