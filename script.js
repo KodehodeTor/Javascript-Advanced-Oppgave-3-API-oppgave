@@ -34,3 +34,12 @@ async function getData(url) {
       .catch((err) => console.log(err));
   }
 }
+
+//Displays data:
+
+function displayData(data) {
+    console.log(data);
+    data.forEach((e => {
+        createCard(e)
+    })
+}
