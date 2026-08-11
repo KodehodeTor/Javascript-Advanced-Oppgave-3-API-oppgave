@@ -9,31 +9,27 @@
 // Scryfall - https://api.scryfall.com
 // MTGJSON - https://mtgjson.com/api/v5/
 
-const mtgapi = "https://mtgjson.com/api/v5/";
 const scryapi = "https://api.scryfall.com";
-
 const cardCont = document.querySelector("#cards");
 
-//Loop that goes through mtgapi
-for (let i = 0; i < mtgapi.length; i++) {
-  getData(mtgapi + `V${i}.json`);
-}
+//An array of different search parameters that runs through a loop.
+const searchQueries = [
+  "type:creature.color:red",
+  "type:planeswalker",
+  "set:neo",
+];
 
-//Vi kan fjerne V17.json fra mtgapi i topp og bruke den annerledes ved å skrive url i fetch og sette opp denne loopen for å smelte sammen flere apis:
-
-//Async getData function
+//Loop that goes through our query parameter
+searchQueries.forEach((query) => {
+  getData(`${scryapi}/cards/search?q=${query}`);
+});
 
 async function getData(url) {
   if (url === "https://api.scryfall.com") {
     fetch(url)
       .then((res) => res.json())
-      .then((data) => displayData(data))
+      .then((data) => displayData(data.data))
       //Dersom vi bruker console.log istedenfor error så er det den informasjonen vi sender. (i konsoll)
-      .catch((err) => console.log(err));
-  } else {
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => displayData(data.data.cards))
       .catch((err) => console.log(err));
   }
 }
