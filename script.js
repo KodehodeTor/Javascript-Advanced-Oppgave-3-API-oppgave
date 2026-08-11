@@ -31,11 +31,17 @@ searchQueries.forEach((query, index) => {
 });
 
 async function getData(url) {
-  if (url === "https://api.scryfall.com") {
-    fetch(url)
+  if (url.startsWith("https://scryfall.com")) {
+    fetch(url, {
+      method: "GET",
+      headers: {
+        //Required header, requests JSON formatting preferance:
+        Accept: "application/json;q=0.9,*/*;q=0.8",
+      },
+    })
       .then((res) => res.json())
       .then((data) => displayData(data.data))
-      .catch((err) => console.log(err));
+      .catch((err) => console.log("Fetch Error: ", err));
   }
 }
 
