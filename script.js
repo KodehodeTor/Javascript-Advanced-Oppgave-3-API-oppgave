@@ -29,14 +29,12 @@ async function getData(url) {
     fetch(url)
       .then((res) => res.json())
       .then((data) => displayData(data.data))
-      //Dersom vi bruker console.log istedenfor error så er det den informasjonen vi sender. (i konsoll)
       .catch((err) => console.log(err));
   }
 }
 
 //Displays data:
 
-//Vi bruker then(data => log(data.data.card)) for å browse i datasettet og finne kun korta. (Vi tok vekk console.log for displayData for funksjonen under)
 function displayData(data) {
   if (!data) return;
   data.forEach((e) => {
