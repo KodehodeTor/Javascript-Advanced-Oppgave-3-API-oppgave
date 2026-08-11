@@ -18,7 +18,7 @@ const cardCont = document.querySelector("#cards");
 
 //An array of different search parameters that runs through a loop.
 const searchQueries = [
-  "type:creature.color:red",
+  "type:creature+color:red",
   "type:planeswalker",
   "set:neo",
 ];
@@ -31,7 +31,7 @@ searchQueries.forEach((query, index) => {
 });
 
 async function getData(url) {
-  if (url.startsWith("https://scryfall.com")) {
+  if (url.startsWith("https://api.scryfall.com")) {
     fetch(url, {
       method: "GET",
       headers: {
@@ -58,7 +58,7 @@ function createCard(cardInfo) {
   const div = document.createElement("div");
   div.className = "card";
   //Bruke CSS for denne ?? v
-  div.style.borderColor = cardInfo.borderColor || "black";
+  //   div.style.borderColor = cardInfo.borderColor || "black";
 
   const p = document.createElement("p");
   let textP = document.createTextNode(cardInfo.name);
