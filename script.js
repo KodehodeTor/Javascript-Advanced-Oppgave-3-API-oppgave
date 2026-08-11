@@ -78,6 +78,7 @@ function createCard(cardInfo) {
 //A top 10(adjustable?) list to check prices of your fav cards in the selected colors.
 //Use localStorage to remember ?
 //Custom small size for the card, display full card when hover / click?
+//Add input field to search.
 
 // BASIC RELEVANT ARRAY STRUCTURE:
 //name: "Name-Name Here"
@@ -85,23 +86,7 @@ function createCard(cardInfo) {
 //colors: Array [B, G, W, P, S, C]
 //legalities: commander: "legal" / "not_legal"
 //prices: eur
-// :
-// null
-// eur_foil
-// :
-// null
-// tix
-// :
-// null
-// usd
-// :
-// null
-// usd_etched
-// :
-// null
-// usd_foil
-// :
-// null
+
 //image_uris
 //large:
 //normal:
@@ -117,3 +102,7 @@ function createCard(cardInfo) {
 //power: "1"
 //toughness: "2"
 //mana_cost: "{R}" "{R}" "{G}" (red red green)
+
+//More info: https://scryfall.com/advanced
+//More info: https://scryfall.com/docs/syntax
+//OBS CHANGES DONE 1 JULY 2026: https://scryfall.com/blog/two-new-ways-to-sync-scryfall-data-236
