@@ -75,7 +75,9 @@ function createCard(cardInfo) {
 
 //GOAL : Make a filter towards legalities (like commander) and colors.
 //As well as order list for price in cardmarket EU trend 30 days
-//A top 10,20 or 50 list to check prices of your fav cards in the selected colors.
+//A top 10 list to check prices of your fav cards in the selected colors.
+//Use localStorage to remember ?
+//Custom small size for the card, display full card when hover / click?
 
 // STRUCTURE:
 //color_identity: Array [W, B]
@@ -100,3 +102,8 @@ function createCard(cardInfo) {
 // usd_foil
 // :
 // null
+//image_uris
+//large:
+//normal:
+//small:
+//thumb:
