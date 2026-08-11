@@ -23,9 +23,11 @@ const searchQueries = [
   "set:neo",
 ];
 
-//Loop that goes through our query parameter
-searchQueries.forEach((query) => {
-  getData(`${scryapi}/cards/search?q=${query}`);
+//Loop that goes through our query parameter. Instead of triggering all request at the same time we space them out by 100ms blocks to comply with Scryfall's server limit.
+searchQueries.forEach((query, index) => {
+  setTimeout(() => {
+    getData(`${scryapi}/cards/search?q=${query}`);
+  }, index * 100);
 });
 
 async function getData(url) {
