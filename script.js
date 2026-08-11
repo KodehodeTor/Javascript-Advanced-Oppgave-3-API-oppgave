@@ -1,9 +1,9 @@
 // ASSIGNMENT REQUIREMENTS & DOCUMENTATION
-//
+
 // 1. Multiple Endpoints: Utilizes Scryfall's search endpoint with dynamic queries.
 // 2. URL Parameters: Appends advanced search parameters (?q=...) to filter data directly on the server.
 // 3. API Data Loops: Uses a time-delayed loop to fetch data, and an array loop to generate UI elements.
-//
+
 // SCRYFALL API RULES IMPLEMENTED:
 // - HTTPS Protocol & TLS: Forced via secure 'https://' base URL structure.
 // - Required Headers: Mandatory 'Accept' header injected manually; browser 'User-Agent' kept intact.
@@ -75,11 +75,11 @@ function createCard(cardInfo) {
 
 //GOAL : Make a filter towards legalities (like commander) and colors.
 //As well as order list for price in cardmarket EU trend 30 days
-//A top 10 list to check prices of your fav cards in the selected colors.
+//A top 10(adjustable?) list to check prices of your fav cards in the selected colors.
 //Use localStorage to remember ?
 //Custom small size for the card, display full card when hover / click?
 
-// STRUCTURE:
+// RELEVANT ARRAY STRUCTURE:
 //color_identity: Array [W, B]
 //colors: Array [B, G, W, P, S, C]
 //legalities: commander: "legal" / "not_legal"

@@ -13,12 +13,12 @@
   letter-spacing: 2px;
   text-transform: uppercase;
 
-  /* Gradient text fill mimicking the gold/yellow style */
+  /* Gradient text fill */
   background: linear-gradient(to bottom, #ffee88 0%, #ffcc00 50%, #bb8800 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  /* Heavy drop shadow for depth and pop */
+  /* Shadow for depth and pop */
   filter: drop-shadow(3px 3px 0px #000) drop-shadow(-1px -1px 0px #000)
     drop-shadow(1px -1px 0px #000) drop-shadow(-1px 1px 0px #000);
 }
