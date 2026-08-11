@@ -8,3 +8,8 @@
 // API'S USED:
 // Scryfall - https://api.scryfall.com
 // MTGJSON - https://mtgjson.com/api/v5/
+
+const mtgapi = "https://mtgjson.com/api/v5/";
+const scryapi = "https://api.scryfall.com";
+
+const cardCont = document.querySelector("#cards");
