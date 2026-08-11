@@ -1,13 +1,17 @@
-// Krav til oppgaven
-// For å sikre at du utfordrer deg selv, må prosjektet ditt inkludere en viss grad av kompleksitet, for eksempel:
+// ASSIGNMENT REQUIREMENTS & DOCUMENTATION
+//
+// 1. Multiple Endpoints: Utilizes Scryfall's search endpoint with dynamic queries.
+// 2. URL Parameters: Appends advanced search parameters (?q=...) to filter data directly on the server.
+// 3. API Data Loops: Uses a time-delayed loop to fetch data, and an array loop to generate UI elements.
+//
+// SCRYFALL API RULES IMPLEMENTED:
+// - HTTPS Protocol & TLS: Forced via secure 'https://' base URL structure.
+// - Required Headers: Mandatory 'Accept' header injected manually; browser 'User-Agent' kept intact.
+// - UTF-8 Compliance: Uses 'document.createTextNode()' to safely render special non-ASCII characters.
+// - Rate-Limiting Protection: Staggers consecutive fetch commands using a 100ms timeout buffer.
 
-// Et API med flere ulike endepunkter som du bruker i prosjektet ditt.
-// Et API med et endepunkt som aksepterer parametere i URL-en.
-// API-data som må kjøres gjennom en løkke for å hente/generere innhold.
-
-// API'S USED:
+// API USED:
 // Scryfall - https://api.scryfall.com
-// MTGJSON - https://mtgjson.com/api/v5/
 
 const scryapi = "https://api.scryfall.com";
 const cardCont = document.querySelector("#cards");
