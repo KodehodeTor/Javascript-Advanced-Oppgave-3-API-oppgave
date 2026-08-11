@@ -19,6 +19,8 @@ for (let i = 0; i < mtgapi.length; i++) {
   getData(mtgapi + `V${i}.json`);
 }
 
+//Vi kan fjerne V17.json fra mtgapi i topp og bruke den annerledes ved å skrive url i fetch og sette opp denne loopen for å smelte sammen flere apis:
+
 //Async getData function
 
 async function getData(url) {
@@ -26,6 +28,7 @@ async function getData(url) {
     fetch(url)
       .then((res) => res.json())
       .then((data) => displayData(data))
+         //Dersom vi bruker console.log istedenfor error så er det den informasjonen vi sender. (i konsoll)
       .catch((err) => console.log(err));
   } else {
     fetch(url)
@@ -37,9 +40,15 @@ async function getData(url) {
 
 //Displays data:
 
+//Vi bruker then(data => log(data.data.card)) for å browse i datasettet og finne kun korta. (Vi tok vekk console.log for displayData for funksjonen under)
 function displayData(data) {
-    console.log(data);
-    data.forEach((e => {
-        createCard(e)
-    })
+  console.log(data);
+  data.forEach((e) => {
+    // console.log(e);
+    createCard(e);
+    // createCard(e);
+    // console.log(e.name, e.manaValue);
+  });
 }
+
+function 
