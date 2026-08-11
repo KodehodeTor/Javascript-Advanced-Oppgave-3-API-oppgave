@@ -46,9 +46,11 @@ async function getData(url) {
 }
 
 //Displays data:
-
 function displayData(data) {
+  //If there is any data, return "Current array of cards: array"
   if (!data) return;
+  console.log("Current array of cards:", data);
+  //For each data create a card
   data.forEach((e) => {
     createCard(e);
   });
@@ -57,13 +59,16 @@ function displayData(data) {
 function createCard(cardInfo) {
   const div = document.createElement("div");
   div.className = "card";
-  //Bruke CSS for denne ?? v
+  //Bruke / endre CSS for denne ?? v
   //   div.style.borderColor = cardInfo.borderColor || "black";
 
   const p = document.createElement("p");
   let textP = document.createTextNode(cardInfo.name);
 
+  //Apend to html
   p.append(textP);
   div.appendChild(p);
   cardCont.appendChild(div);
 }
+
+// NOW TO APPEND THE CARDS PROPERLY WITH THEIR RESPECTED IMAGE!!!
