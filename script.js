@@ -103,6 +103,23 @@ function createCard(cardInfo) {
 //toughness: "2"
 //mana_cost: "{R}" "{R}" "{G}" (red red green)
 
+// Content Security Policy (CSP)
+// For CSP, you can grantlist *.scryfall.com to use our API and our assets. You do not need to grantlist the apex domain.
+
+// If you would like an exhaustive list instead, a spec is provided below to merge with your existing CSP header:
+
+// connect-src
+//   api.scryfall.com
+//   embed.scryfall.com;
+// img-src
+//   *.scryfall.io
+// style-src
+//   embed.scryfall.com;
+// script-src
+//   embed.scryfall.com;
+// font-src
+//   embed.scryfall.com;
+
 //More info: https://scryfall.com/advanced
 //More info: https://scryfall.com/docs/syntax
 //OBS CHANGES DONE 1 JULY 2026: https://scryfall.com/blog/two-new-ways-to-sync-scryfall-data-236
