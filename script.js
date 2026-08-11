@@ -79,11 +79,11 @@ function createCard(cardInfo) {
 //Use localStorage to remember ?
 //Custom small size for the card, display full card when hover / click?
 
-// RELEVANT ARRAY STRUCTURE:
+// BASIC RELEVANT ARRAY STRUCTURE:
+//name: "Name-Name Here"
 //color_identity: Array [W, B]
 //colors: Array [B, G, W, P, S, C]
 //legalities: commander: "legal" / "not_legal"
-//finishes: ['nonfoil]/['foil'] foil:false/true
 //prices: eur
 // :
 // null
@@ -107,3 +107,13 @@ function createCard(cardInfo) {
 //normal:
 //small:
 //thumb:
+
+//EXTRA ARRAY STRUCTURE?
+//artist: "Name Here"
+//finishes: ['nonfoil]/['foil'] foil:false/true
+//game_changer: false/true
+//set: "name"
+//set_name "Name: Name Here"
+//power: "1"
+//toughness: "2"
+//mana_cost: "{R}" "{R}" "{G}" (red red green)
