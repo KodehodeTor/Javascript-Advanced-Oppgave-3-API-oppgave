@@ -1,16 +1,11 @@
-.card {
-  width: 100px;
-  height: 150px;
-  border: 1px solid black;
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  padding: 16px;
-}
-
+/* TITLE */
 #title {
   font-family: "Beleren", "Matrix", "Georgia", serif;
   font-size: 3rem;
@@ -26,4 +21,18 @@
   /* Heavy drop shadow for depth and pop */
   filter: drop-shadow(3px 3px 0px #000) drop-shadow(-1px -1px 0px #000)
     drop-shadow(1px -1px 0px #000) drop-shadow(-1px 1px 0px #000);
+}
+
+/* CARDS */
+.card {
+  width: 100px;
+  height: 150px;
+  border: 1px solid black;
+}
+
+#cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 16px;
 }
