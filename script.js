@@ -17,7 +17,8 @@ const scryapi = "https://api.scryfall.com";
 
 const cardCont = document.querySelector("#cards");
 
-const search =
+const search = document.querySelector("#search")
+  //DE-SELECTING UNDER SECTION FOR A BETTER SOLUTION:
   // An array of different search parameters that runs through a loop.
   // const searchQueries = [
   //   "type:creature+color:red",
@@ -33,6 +34,40 @@ const search =
   // });
 
   //NEW FUNCTION INC:
+
+  search.addEventListener("submit", function (e) {
+    //Stops the browser for executing default built in behaviour
+    e.preventDefault();
+
+    const color = document.querySelector("#color").value;
+    const type = document.querySelector("#type").value;
+    const set = document.querySelector("#set").value;
+    const name = document.querySelector("#name").value;
+    const commander = document.querySelector("#commander").value;
+
+    let query = "";
+
+    if (color) {
+      query += `color: ${color}`;
+    }
+    if (type) {
+      query += `color: ${type}`;
+    }
+    if (set) {
+      query += `color: ${set}`;
+    }
+    if (name) {
+      query += `color: ${name}`;
+    }
+    if (commander) {
+      query += `color: ${commander}`;
+    }
+
+    console.log("Scryfall query:" query);
+    //encodes a specific component of a URI by replacing special characters with UTF-8.
+    getData(`${scryapi}/cards/search?q=${encodeURIComponent(query)}`)
+    
+  })
 
   async function getData(url) {
     if (url.startsWith("https://api.scryfall.com")) {
