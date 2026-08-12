@@ -15,7 +15,8 @@ body {
   color: whitesmoke;
   min-height: 100vh;
   background-size: 100%;
-  background-color: #808080;
+  background-color: #c0c0c0;
+  background-attachment: fixed;
 }
 
 p {
@@ -68,6 +69,6 @@ label {
 #cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 100px;
+  gap: 150px;
   padding: 16px;
 }
