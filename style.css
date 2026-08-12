@@ -34,12 +34,16 @@ body {
 .card {
   width: 100px;
   height: 150px;
-  border: 1px solid black;
+  color: transparent;
+}
+
+.card img {
+  width: 200px;
 }
 
 #cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 500px;
+  gap: 100px;
   padding: 16px;
 }

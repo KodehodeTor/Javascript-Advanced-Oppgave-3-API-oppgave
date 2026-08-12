@@ -14,36 +14,40 @@
 // Scryfall - https://api.scryfall.com
 
 const scryapi = "https://api.scryfall.com";
+
 const cardCont = document.querySelector("#cards");
 
-//An array of different search parameters that runs through a loop.
-const searchQueries = [
-  "type:creature+color:black",
-  "type:planeswalker",
-  "set:neo",
-];
+const search =
+  // An array of different search parameters that runs through a loop.
+  // const searchQueries = [
+  //   "type:creature+color:red",
+  //   "type:planeswalker",
+  //   "set:neo",
+  // ];
 
-//Loop that goes through our query parameter. Instead of triggering all request at the same time we space them out by 100ms blocks to comply with Scryfall's server limit.
-searchQueries.forEach((query, index) => {
-  setTimeout(() => {
-    getData(`${scryapi}/cards/search?q=${query}`);
-  }, index * 100);
-});
+  // Loop that goes through our query parameter. Instead of triggering all request at the same time we space them out by 100ms blocks to comply with Scryfall's server limit.
+  // searchQueries.forEach((query, index) => {
+  //   setTimeout(() => {
+  //     getData(`${scryapi}/cards/search?q=${query}`);
+  //   }, index * 100);
+  // });
 
-async function getData(url) {
-  if (url.startsWith("https://api.scryfall.com")) {
-    fetch(url, {
-      method: "GET",
-      headers: {
-        //Required header, requests JSON formatting preferance:
-        Accept: "application/json;q=0.9,*/*;q=0.8",
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => displayData(data.data))
-      .catch((err) => console.log("Fetch Error: ", err));
-  }
-}
+  //NEW FUNCTION INC:
+
+  async function getData(url) {
+    if (url.startsWith("https://api.scryfall.com")) {
+      fetch(url, {
+        method: "GET",
+        headers: {
+          //Required header, requests JSON formatting preferance:
+          Accept: "application/json;q=0.9,*/*;q=0.8",
+        },
+      })
+        .then((res) => res.json())
+        .then((data) => displayData(data.data))
+        .catch((err) => console.log("Fetch Error: ", err));
+    }
+  };
 
 //Displays data:
 function displayData(data) {
@@ -59,8 +63,6 @@ function displayData(data) {
 function createCard(cardInfo) {
   const div = document.createElement("div");
   div.className = "card";
-  //Bruke / endre CSS for denne ?? v
-  //   div.style.borderColor = cardInfo.borderColor || "black";
 
   const p = document.createElement("p");
   let textP = document.createTextNode(cardInfo.name);
