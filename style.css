@@ -9,7 +9,17 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: top;
+  background: linear-gradient(to bottom, #000000 0%, #808080 50%, #c0c0c0 100%)
+    no-repeat;
+  color: whitesmoke;
+  min-height: 100vh;
+  background-size: 100%;
+  background-color: #808080;
+}
+
+p {
+  padding: 5px;
 }
 
 /* TITLE */
@@ -28,6 +38,20 @@ body {
   /* Shadow for depth and pop */
   filter: drop-shadow(3px 3px 0px #000) drop-shadow(-1px -1px 0px #000)
     drop-shadow(1px -1px 0px #000) drop-shadow(-1px 1px 0px #000);
+}
+
+/* SEARCH / INPUT FIELD */
+form {
+  padding: 25px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+select {
+}
+
+label {
 }
 
 /* CARDS */
