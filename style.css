@@ -9,14 +9,21 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: top;
+  justify-content: flex-start; /* 'top' is invalid in flexbox; use flex-start */
+
+  /* 1. Define the gradient and the solid color fallback */
   background: linear-gradient(to bottom, #000000 0%, #808080 50%, #c0c0c0 100%)
     no-repeat;
+  background-color: #c0c0c0;
+
+  /* 2. Lock the gradient size to the viewport height (or any fixed size) */
+  background-size: 100% 100vh;
+
+  /* 3. Remove background-attachment: fixed so it scrolls naturally */
+  background-attachment: scroll;
+
   color: whitesmoke;
   min-height: 100vh;
-  background-size: 100%;
-  background-color: #c0c0c0;
-  background-attachment: fixed;
 }
 
 p {
