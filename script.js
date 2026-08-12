@@ -18,7 +18,7 @@ const cardCont = document.querySelector("#cards");
 
 //An array of different search parameters that runs through a loop.
 const searchQueries = [
-  "type:creature+color:red",
+  "type:creature+color:black",
   "type:planeswalker",
   "set:neo",
 ];
@@ -65,9 +65,14 @@ function createCard(cardInfo) {
   const p = document.createElement("p");
   let textP = document.createTextNode(cardInfo.name);
 
+  const img = document.createElement("img");
+  img.src = cardInfo.image_uris.normal;
+  img.alt = cardInfo.name;
+
   //Apend to html
   p.append(textP);
   div.appendChild(p);
+  div.appendChild(img);
   cardCont.appendChild(div);
 }
 
@@ -102,6 +107,7 @@ function createCard(cardInfo) {
 //power: "1"
 //toughness: "2"
 //mana_cost: "{R}" "{R}" "{G}" (red red green)
+// cardmarket_id: 468339
 
 // Content Security Policy (CSP)
 // For CSP, you can grantlist *.scryfall.com to use our API and our assets. You do not need to grantlist the apex domain.
@@ -123,3 +129,6 @@ function createCard(cardInfo) {
 //More info: https://scryfall.com/advanced
 //More info: https://scryfall.com/docs/syntax
 //OBS CHANGES DONE 1 JULY 2026: https://scryfall.com/blog/two-new-ways-to-sync-scryfall-data-236
+//API Practice: Always fetch URIs dynamically via the Scryfall API rather than hardcoding static subdomain paths, as asset hostnames can update.
+
+// The Scryfall Magic search endpoint returns a maximum of 175 cards per page/array. If your query has more results, you must check the has_more boolean and loop through subsequent pages using the &page=2, &page=3 parameters. (Pagination Issue)
