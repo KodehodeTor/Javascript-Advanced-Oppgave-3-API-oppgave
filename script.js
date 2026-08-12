@@ -1,40 +1,10 @@
-// ASSIGNMENT REQUIREMENTS & DOCUMENTATION
-
-// 1. Multiple Endpoints: Utilizes Scryfall's search endpoint with dynamic queries.
-// 2. URL Parameters: Appends advanced search parameters (?q=...) to filter data directly on the server.
-// 3. API Data Loops: Uses a time-delayed loop to fetch data, and an array loop to generate UI elements.
-
-// SCRYFALL API RULES IMPLEMENTED:
-// - HTTPS Protocol & TLS: Forced via secure 'https://' base URL structure.
-// - Required Headers: Mandatory 'Accept' header injected manually; browser 'User-Agent' kept intact.
-// - UTF-8 Compliance: Uses 'document.createTextNode()' to safely render special non-ASCII characters.
-// - Rate-Limiting Protection: Staggers consecutive fetch commands using a 100ms timeout buffer.
-
-// API USED:
-// Scryfall - https://api.scryfall.com
-
+// API source
 const scryapi = "https://api.scryfall.com";
 
 const cardCont = document.querySelector("#cards");
-
 const search = document.querySelector("#search");
-//DE-SELECTING UNDER SECTION FOR A BETTER SOLUTION:
-// An array of different search parameters that runs through a loop.
-// const searchQueries = [
-//   "type:creature+color:red",
-//   "type:planeswalker",
-//   "set:neo",
-// ];
 
-// Loop that goes through our query parameter. Instead of triggering all request at the same time we space them out by 100ms blocks to comply with Scryfall's server limit.
-// searchQueries.forEach((query, index) => {
-//   setTimeout(() => {
-//     getData(`${scryapi}/cards/search?q=${query}`);
-//   }, index * 100);
-// });
-
-//NEW FUNCTION INC:
-
+// Search function
 search.addEventListener("submit", function (e) {
   //Stops the browser for executing default built in behaviour
   e.preventDefault();
@@ -48,19 +18,19 @@ search.addEventListener("submit", function (e) {
   let query = "";
 
   if (color) {
-    query += `color: ${color} `;
+    query += `color:${color} `;
   }
   if (type) {
-    query += `type: ${type} `;
+    query += `type:${type} `;
   }
   if (set) {
-    query += `set: ${set} `;
+    query += `set:${set} `;
   }
   if (name) {
-    query += `name: ${name} `;
+    query += `name:${name} `;
   }
   if (commander) {
-    query += `commander: ${commander} `;
+    query += `commander:${commander} `;
   }
 
   console.log("Scryfall query:", query);
@@ -111,28 +81,6 @@ function createCard(cardInfo) {
   div.appendChild(img);
   cardCont.appendChild(div);
 }
-
-// NOW TO APPEND THE CARDS PROPERLY WITH THEIR RESPECTED IMAGE!!!
-
-//GOAL : Make a filter towards legalities (like commander) and colors.
-//As well as order list for price in cardmarket EU trend 30 days
-//A top 10(adjustable?) list to check prices of your fav cards in the selected colors.
-//Use localStorage to remember ?
-//Custom small size for the card, display full card when hover / click?
-//Add input field to search.
-
-// BASIC RELEVANT ARRAY STRUCTURE:
-//name: "Name-Name Here"
-//color_identity: Array [W, B]
-//colors: Array [B, G, W, P, S, C]
-//legalities: commander: "legal" / "not_legal"
-//prices: eur
-
-//image_uris
-//large:
-//normal:
-//small:
-//thumb:
 
 //EXTRA ARRAY STRUCTURE?
 //artist: "Name Here"
