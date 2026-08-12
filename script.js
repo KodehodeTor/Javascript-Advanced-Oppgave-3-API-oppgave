@@ -38,6 +38,8 @@ search.addEventListener("submit", function (e) {
   getData(`${scryapi}/cards/search?q=${encodeURIComponent(query)}`);
 });
 
+//ISSUE: We only get one 175 array! We need to check if another array exisist and add a next page into getData function.
+
 async function getData(url) {
   if (url.startsWith("https://api.scryfall.com")) {
     fetch(url, {
@@ -121,3 +123,5 @@ function createCard(cardInfo) {
 //API Practice: Always fetch URIs dynamically via the Scryfall API rather than hardcoding static subdomain paths, as asset hostnames can update.
 
 // The Scryfall Magic search endpoint returns a maximum of 175 cards per page/array. If your query has more results, you must check the has_more boolean and loop through subsequent pages using the &page=2, &page=3 parameters. (Pagination Issue)
+
+//
