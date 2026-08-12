@@ -72,7 +72,11 @@ function createCard(cardInfo) {
   let textP = document.createTextNode(cardInfo.name);
 
   const img = document.createElement("img");
-  img.src = cardInfo.image_uris.normal;
+  if (cardInfo.image_uris) {
+    img.src = cardInfo.image_uris.normal;
+  } else if (cardInfo.card_faces) {
+    img.src = cardInfo.card_faces[0].image_uris.normal;
+  }
   img.alt = cardInfo.name;
 
   //Apend to html
