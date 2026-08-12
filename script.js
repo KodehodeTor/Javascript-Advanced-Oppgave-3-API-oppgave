@@ -73,6 +73,7 @@ function createCard(cardInfo) {
 
   const img = document.createElement("img");
   if (cardInfo.image_uris) {
+    //If uri is normal, display normal card.(cardInfo->uris->normal) If not; the structure is different. (cardInfo->card_faces->[0]->image_uris->normal)
     img.src = cardInfo.image_uris.normal;
   } else if (cardInfo.card_faces) {
     img.src = cardInfo.card_faces[0].image_uris.normal;
