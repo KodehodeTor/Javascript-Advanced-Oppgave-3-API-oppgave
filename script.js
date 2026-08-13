@@ -81,6 +81,12 @@ function loadNextPage() {
   }
 }
 
+//Eventlistner for load button
+const loadBtn = document.querySelector("#load_btn");
+if (loadBtn) {
+  loadBtn.addEventListener("click", loadNextPage);
+}
+
 //Shows the load more button if more pages exists.
 function toggleLoadMoreButton() {
   const btn = document.querySelector("#load_btn");
@@ -93,6 +99,9 @@ function toggleLoadMoreButton() {
 function displayData(data) {
   //If there is any data, return "Current array of cards: array"
   if (!data) return;
+  //Clear container to avoid duplicates
+  cardCont.innerHTML = "";
+
   console.log("Current array of cards:", data);
   //For each data create a card
   data.forEach((e) => {
