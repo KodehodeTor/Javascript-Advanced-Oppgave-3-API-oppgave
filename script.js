@@ -40,7 +40,10 @@ search.addEventListener("submit", function (e) {
 
 //ISSUE: We only get one 175 array! We need to check if another array exisist and add a next page into getData function.
 
-async function getData(url) {
+let nextUrl = null;
+let allLoadedCards = [];
+
+async function getData(url, isNextPage = false) {
   if (url.startsWith("https://api.scryfall.com")) {
     fetch(url, {
       method: "GET",
@@ -50,10 +53,24 @@ async function getData(url) {
       },
     })
       .then((res) => res.json())
-      .then((data) => displayData(data.data))
+      //If its a new search, clear old array.
+      .then((data) => {
+        if (!isNextPage) {
+          allLoadedCards = []
+        }
+        //Append new array of 175 to list
+        allLoadedCards = allLoadedCards.concat(data.data)
+        //Save next page URL
+        nextUrl = data.has_more ? data.next_page : null
+        //Display updated array
+        displayData(allLoadedCards)
+        //Load more button
+        toggleLoadMoreButton()
+      }
       .catch((err) => console.log("Fetch Error: ", err));
   }
 }
+
 
 //Displays data:
 function displayData(data) {
