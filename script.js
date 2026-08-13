@@ -12,7 +12,7 @@ search.addEventListener("submit", function (e) {
   const color = document.querySelector("#color").value;
   const type = document.querySelector("#type").value;
   const set = document.querySelector("#set").value;
-  const name = document.querySelector("#name").value;
+  const name = document.querySelector("#card_name").value;
   const commander = document.querySelector("#commander").value;
 
   let query = "";
