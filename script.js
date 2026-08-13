@@ -45,6 +45,11 @@ let allLoadedCards = [];
 
 async function getData(url, isNextPage = false) {
   if (url.startsWith("https://api.scryfall.com")) {
+    const spinner = document.querySelector("#loading_spinner");
+    if (spinner) {
+      spinner.style.display = "block";
+    }
+
     fetch(url, {
       method: "GET",
       headers: {
