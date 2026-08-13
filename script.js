@@ -137,39 +137,13 @@ function createCard(cardInfo) {
   cardCont.appendChild(div);
 }
 
-//EXTRA ARRAY STRUCTURE?
-//artist: "Name Here"
-//finishes: ['nonfoil]/['foil'] foil:false/true
-//game_changer: false/true
-//set: "name"
-//set_name "Name: Name Here"
-//power: "1"
-//toughness: "2"
-//mana_cost: "{R}" "{R}" "{G}" (red red green)
-// cardmarket_id: 468339
-
-// Content Security Policy (CSP)
-// For CSP, you can grantlist *.scryfall.com to use our API and our assets. You do not need to grantlist the apex domain.
-
-// If you would like an exhaustive list instead, a spec is provided below to merge with your existing CSP header:
-
-// connect-src
-//   api.scryfall.com
-//   embed.scryfall.com;
-// img-src
-//   *.scryfall.io
-// style-src
-//   embed.scryfall.com;
-// script-src
-//   embed.scryfall.com;
-// font-src
-//   embed.scryfall.com;
-
+//NOTES & FUTURE PLANS
+// Add card title over the cards
+// Align the cards!
+// Card saver (localStorage)
+// Need a box on the top where you can save your cards and follow pricing trends in cardmarket etc.
+// Delete individual cards from the save_box
 //More info: https://scryfall.com/advanced
 //More info: https://scryfall.com/docs/syntax
 //OBS CHANGES DONE 1 JULY 2026: https://scryfall.com/blog/two-new-ways-to-sync-scryfall-data-236
 //API Practice: Always fetch URIs dynamically via the Scryfall API rather than hardcoding static subdomain paths, as asset hostnames can update.
-
-// The Scryfall Magic search endpoint returns a maximum of 175 cards per page/array. If your query has more results, you must check the has_more boolean and loop through subsequent pages using the &page=2, &page=3 parameters. (Pagination Issue)
-
-//
