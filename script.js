@@ -76,7 +76,7 @@ function loadNextPage() {
   if (nextUrl) {
     setTimeout(() => {
       //Scryfall needs 100ms delay for requests.
-      fetchCards(nextUrl, true);
+      getData(nextUrl, true);
     }, 100);
   }
 }
