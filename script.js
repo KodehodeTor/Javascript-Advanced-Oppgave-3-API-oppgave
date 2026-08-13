@@ -56,39 +56,38 @@ async function getData(url, isNextPage = false) {
       //If its a new search, clear old array.
       .then((data) => {
         if (!isNextPage) {
-          allLoadedCards = []
+          allLoadedCards = [];
         }
         //Append new array of 175 to list
-        allLoadedCards = allLoadedCards.concat(data.data)
+        allLoadedCards = allLoadedCards.concat(data.data);
         //Save next page URL
-        nextUrl = data.has_more ? data.next_page : null
+        nextUrl = data.has_more ? data.next_page : null;
         //Display updated array
-        displayData(allLoadedCards)
+        displayData(allLoadedCards);
         //Load more button
-        toggleLoadMoreButton()
-      }
+        toggleLoadMoreButton();
+      })
       .catch((err) => console.log("Fetch Error: ", err));
   }
 }
 
 //Runs when clicking "load more"
-function loadNextPage () {
+function loadNextPage() {
   if (nextUrl) {
     setTimeout(() => {
       //Scryfall needs 100ms delay for requests.
-      fetchCards(nextUrl, true)
-    }, 100)
+      fetchCards(nextUrl, true);
+    }, 100);
   }
 }
 
 //Shows the load more button if more pages exists.
 function toggleLoadMoreButton() {
-  const btn = document.querySelector("#load_btn")
+  const btn = document.querySelector("#load_btn");
   if (btn) {
-    btn.style.display = nextUrl ? "block" : "none"
+    btn.style.display = nextUrl ? "block" : "none";
   }
 }
-
 
 //Displays data:
 function displayData(data) {
