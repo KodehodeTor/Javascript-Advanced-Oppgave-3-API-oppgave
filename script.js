@@ -71,6 +71,16 @@ async function getData(url, isNextPage = false) {
   }
 }
 
+//Runs when clicking "load more"
+function loadNextPage () {
+  if (nextUrl) {
+    setTimeout(() => {
+      //Scryfall needs 100ms delay for requests.
+      fetchCards(nextUrl, true)
+    }, 100)
+  }
+}
+
 
 //Displays data:
 function displayData(data) {
