@@ -81,6 +81,14 @@ function loadNextPage () {
   }
 }
 
+//Shows the load more button if more pages exists.
+function toggleLoadMoreButton() {
+  const btn = document.querySelector("#load_btn")
+  if (btn) {
+    btn.style.display = nextUrl ? "block" : "none"
+  }
+}
+
 
 //Displays data:
 function displayData(data) {
