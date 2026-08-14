@@ -140,7 +140,7 @@ button:hover {
 #cards {
   margin-top: 100px;
   display: grid;
-  grid-template-columns: repeat(3, 200px);
+  grid-template-columns: repeat(4, 200px);
   gap: 20px;
   padding: 20px;
   box-sizing: border-box;
