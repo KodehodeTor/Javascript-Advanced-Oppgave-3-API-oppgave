@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+/* GENERAL SETTINGS */
 body {
   display: flex;
   flex-direction: column;
@@ -98,6 +99,7 @@ label {
   font-size: 1.3rem;
   padding-bottom: 10px;
   padding-right: 10px;
+  max-width: 135px;
 }
 
 #full_search {
@@ -112,6 +114,25 @@ label {
   box-shadow:
     0 0 20px rgba(0, 0, 0, 0.8),
     inset 0 0 20px rgba (255, 255, 255, 0.03);
+}
+
+/* BUTTON */
+
+button {
+  margin-right: -75px;
+  position: relative;
+  z-index: 1;
+  padding: 9px 80px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: black;
+  background: linear-gradient(#e2bd45, #9b7415);
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+button:hover {
+  box-shadow: 0 0 15px rgba(245, 199, 66, 0.5);
 }
 
 /* CARDS */
