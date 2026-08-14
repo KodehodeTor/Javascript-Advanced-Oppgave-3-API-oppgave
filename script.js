@@ -71,7 +71,10 @@ async function getData(url, isNextPage = false) {
         //Load more button
         toggleLoadMoreButton();
       })
-      .catch((err) => console.log("Fetch Error: ", err));
+      .catch((err) => console.log("Fetch Error: ", err))
+      .finally((e) => {
+        document.querySelector("#loading_spinner").style.display = "none";
+      });
   }
 }
 
