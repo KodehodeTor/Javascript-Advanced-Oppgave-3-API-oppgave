@@ -13,7 +13,7 @@ body {
   background: radial-gradient(
     circle at top,
     #3d3d3d 0%,
-    #0b0b0b 65%,
+    #0b0b0b 45%,
     #000000 100%
   );
   background-color: #000000;
@@ -111,6 +111,7 @@ label {
   border-radius: 4.75% / 3.5%;
   box-shadow: 0 4px 8px rgba (0, 0, 0, 0.3);
   display: blocK;
+  filter: drop-shadow(0px 0px 30px rgba(255, 255, 255, 0.2));
 }
 
 /* SPINNER */
