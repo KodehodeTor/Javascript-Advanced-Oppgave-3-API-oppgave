@@ -37,7 +37,7 @@ p {
 /* TITLE */
 #title {
   font-family: "Beleren", "Matrix", "Georgia", serif;
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 900;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -61,10 +61,21 @@ form {
   max-height: 70px;
 }
 
-input {
+input,
+select {
+  background: #151515;
+  color: white;
+  border: 1px solid whitesmoke;
+  border-radius: 5px;
+  padding: 8px 10px;
+  font-size: 1rem;
 }
 
-select {
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #d4af37;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
 }
 
 label {
