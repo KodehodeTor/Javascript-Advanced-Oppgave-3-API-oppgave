@@ -201,3 +201,8 @@ button:hover {
     transform: rotate(360deg);
   }
 }
+
+/* Slight issue */
+/* Names that are very long are now cut out to not make another line or melt into others with overflow: hidden - but the extra long names are leaning more towards the left as the middle off the text is somewhere we can see. */
+
+/* Psuedo solution: Ignore " // ......" and onwards in <p> so the text is central. */
