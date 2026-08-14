@@ -53,12 +53,29 @@ form {
   display: flex;
   flex-direction: row;
   gap: 5px;
+  max-height: 70px;
+}
+
+input {
 }
 
 select {
 }
 
 label {
+}
+
+#full_search {
+  /* width: 90%; */
+  max-width: 1400px;
+  margin: 70px auto 30px;
+  padding: 30px;
+  background: rgba(15, 15, 15, 0.85);
+  border: 1px solid #555;
+  border-radius: 12px;
+  box-shadow:
+    0 0 20px rgba(0, 0, 0, 0.8),
+    inset 0 0 20px rgba (255, 255, 255, 0.03);
 }
 
 /* CARDS */
