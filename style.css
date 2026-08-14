@@ -94,8 +94,10 @@ select:focus {
 }
 
 label {
+  padding-left: 10px;
   font-size: 1.3rem;
   padding-bottom: 10px;
+  padding-right: 10px;
 }
 
 #full_search {
@@ -163,7 +165,3 @@ label {
     transform: rotate(360deg);
   }
 }
-
-/* NEW ISSUE! */
-/* Cards with double face has a long name. Need to ignore "// *cardName* from p or make more space without p pushing content further down.*/
-/*  */
