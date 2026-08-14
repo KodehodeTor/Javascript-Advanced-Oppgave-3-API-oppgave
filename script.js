@@ -9,6 +9,7 @@ search.addEventListener("submit", function (e) {
   //Stops the browser for executing default built in behaviour
   e.preventDefault();
 
+  //HTML elements
   const color = document.querySelector("#color").value;
   const type = document.querySelector("#type").value;
   const set = document.querySelector("#set").value;
@@ -37,8 +38,6 @@ search.addEventListener("submit", function (e) {
   //encodes a specific component of a URI by replacing special characters with UTF-8.
   getData(`${scryapi}/cards/search?q=${encodeURIComponent(query)}`);
 });
-
-//ISSUE: We only get one 175 array! We need to check if another array exisist and add a next page into getData function.
 
 let nextUrl = null;
 let allLoadedCards = [];
@@ -143,7 +142,3 @@ function createCard(cardInfo) {
 // Card saver (localStorage)
 // Need a box on the top where you can save your cards and follow pricing trends in cardmarket etc.
 // Delete individual cards from the save_box
-//More info: https://scryfall.com/advanced
-//More info: https://scryfall.com/docs/syntax
-//OBS CHANGES DONE 1 JULY 2026: https://scryfall.com/blog/two-new-ways-to-sync-scryfall-data-236
-//API Practice: Always fetch URIs dynamically via the Scryfall API rather than hardcoding static subdomain paths, as asset hostnames can update.
