@@ -70,8 +70,9 @@ async function getData(url, isNextPage = false) {
         displayData(allLoadedCards);
         //Load more button
         toggleLoadMoreButton();
-      })
+      }) //Catches errors
       .catch((err) => console.log("Fetch Error: ", err))
+      // Stops the loading spinner from spinning after loading
       .finally((e) => {
         document.querySelector("#loading_spinner").style.display = "none";
       });

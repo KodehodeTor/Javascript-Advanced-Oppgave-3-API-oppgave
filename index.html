@@ -11,48 +11,53 @@
     <h1 id="title">MTG CARDS</h1>
     <p>For set list, look here: https://scryfall.com/sets</p>
 
-    <form id="search">
-      <label for="color">Color: </label>
-      <select name="color" id="color">
-        <option value="">Any color</option>
-        <option value="W">White</option>
-        <option value="U">Blue</option>
-        <option value="B">Black</option>
-        <option value="R">Red</option>
-        <option value="G">Green</option>
-      </select>
+    <div id="full_search">
+      <form id="search">
+        <label for="color">Color: </label>
+        <select name="color" id="color">
+          <option value="">Any color</option>
+          <option value="W">White</option>
+          <option value="U">Blue</option>
+          <option value="B">Black</option>
+          <option value="R">Red</option>
+          <option value="G">Green</option>
+        </select>
 
-      <label for="type">Card type:</label>
-      <select name="type" id="type">
-        <option value="">Any type</option>
-        <option value="creature">Creature</option>
-        <option value="planeswalker">Planeswalker</option>
-        <option value="instant">Instant</option>
-        <option value="sorcery">Sorcery</option>
-        <option value="artifact">Artifact</option>
-        <option value="enchantment">Enchantment</option>
-        <option value="land">Land</option>
-      </select>
+        <label for="type">Card type:</label>
+        <select name="type" id="type">
+          <option value="">Any type</option>
+          <option value="creature">Creature</option>
+          <option value="planeswalker">Planeswalker</option>
+          <option value="instant">Instant</option>
+          <option value="sorcery">Sorcery</option>
+          <option value="artifact">Artifact</option>
+          <option value="enchantment">Enchantment</option>
+          <option value="land">Land</option>
+        </select>
 
-      <label for="set">Set</label>
-      <input type="text" id="set" placeholder="Example: neo" />
-      <label for="card_name">Card name</label>
-      <input type="text" id="card_name" placeholder="Example: Sheoldred" />
+        <label for="set">Set</label>
+        <input type="text" id="set" placeholder="Example: neo" />
+        <label for="card_name">Card name</label>
+        <input type="text" id="card_name" placeholder="Example: Sheoldred" />
 
-      <label for="commander">Commander legality</label>
-      <select name="commander" id="commander">
-        <option value="">Any</option>
-        <option value="legal">Legal</option>
-        <option value="not_legal">Not Legal</option>
-      </select>
+        <label for="commander">Commander legality</label>
+        <select name="commander" id="commander">
+          <option value="">Any</option>
+          <option value="legal">Legal</option>
+          <option value="not_legal">Not Legal</option>
+        </select>
 
-      <button type="submit">Search</button>
-    </form>
+        <button type="submit">Search</button>
+      </form>
+    </div>
+
+    <!-- Load more button -->
     <button id="load_btn" style="display: none">Load More</button>
-
+    <!-- TBA - saved cards box -->
     <main id="saved_cards"></main>
-
+    <!-- Main cards -->
     <main id="cards"></main>
+    <!-- Loading spinner -->
     <div id="loading_spinner" class="spinner" style="display: none"></div>
   </body>
 </html>
