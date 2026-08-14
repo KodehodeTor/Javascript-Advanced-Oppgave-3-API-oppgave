@@ -24,9 +24,9 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bolder;
-  white-space: nowrap;
+  margin-bottom: 25px;
 }
 
 /* TITLE */
@@ -64,7 +64,7 @@ label {
 /* CARDS */
 
 #cards {
-  margin-top: 300px;
+  margin-top: 100px;
   display: grid;
   grid-template-columns: repeat(3, 200px);
   gap: 20px;
@@ -75,6 +75,11 @@ label {
 
 .card {
   color: black;
+}
+
+.card p {
+  max-height: 16px;
+  overflow: hidden;
 }
 
 .card img {
@@ -106,3 +111,7 @@ label {
     transform: rotate(360deg);
   }
 }
+
+/* NEW ISSUE! */
+/* Cards with double face has a long name. Need to ignore "// *cardName* from p or make more space without p pushing content further down.*/
+/*  */
