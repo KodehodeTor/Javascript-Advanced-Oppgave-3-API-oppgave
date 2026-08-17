@@ -42,6 +42,7 @@ search.addEventListener("submit", function (e) {
 let nextUrl = null;
 let allLoadedCards = [];
 
+//Function for getting data, load next array. Includes loading spinner.
 async function getData(url, isNextPage = false) {
   if (url.startsWith("https://api.scryfall.com")) {
     const spinner = document.querySelector("#loading_spinner");
