@@ -88,6 +88,8 @@ form {
   max-width: 880px;
 }
 
+/* Minor issue: The border animation works too fast around the corners and is slight visible at both top and bottom when circling around. */
+
 form#search {
   position: relative;
   z-index: 0;
@@ -105,7 +107,7 @@ form#search:before {
     #ffcc00 40deg,
     transparent 130deg
   );
-  animation: spin 6s linear infinite;
+  animation: borderSpin 6s linear infinite;
   z-index: -2;
 }
 
@@ -118,13 +120,13 @@ form#search::after {
   z-index: -1;
 }
 
-@keyframes spin {
+@keyframes borderSpin {
   to {
     transform: rotate(360deg);
   }
 }
 
-/* ONGOING ISSUE: Changing commander drop down menu resizes the search button */
+/* ONGOING ISSUE: Changing commander drop down menu resizes the search button (we can also add some padding to the form box (how?) */
 input,
 select {
   appearance: base-select;
@@ -236,14 +238,14 @@ button:hover {
   border: 5px solid #f3f3f3;
   border-top: 5px solid #dbd030;
   border-radius: 50%;
-  animation: spin 1s linear infinite;
+  animation: spinnerSpin 1s linear infinite;
   margin: 20px auto;
   position: fixed;
   z-index: 1;
   top: 320px;
 }
 
-@keyframes spin {
+@keyframes spinnerSpin {
   0% {
     transform: rotate(0deg);
   }
@@ -251,8 +253,3 @@ button:hover {
     transform: rotate(360deg);
   }
 }
-
-/* Slight issue */
-/* Names that are very long are now cut out to not make another line or melt into others with overflow: hidden - but the extra long names are leaning more towards the left as the middle off the text is somewhere we can see. */
-
-/* Psuedo solution: Ignore " // ......" and onwards in <p> so the text is central.  */
