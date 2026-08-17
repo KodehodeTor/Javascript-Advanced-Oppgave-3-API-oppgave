@@ -1,4 +1,10 @@
 /* CSS RESET */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -92,12 +98,12 @@ form#search {
 form#search:before {
   content: "";
   position: absolute;
-  inset: -50%;
+  inset: 0%;
   background: conic-gradient(
-    from 0deg,
-    transparent 0%,
-    #ffcc00 15%,
-    transparent 30%
+    from var(--angle),
+    transparent 0deg,
+    #ffcc00 40deg,
+    transparent 130deg
   );
   animation: spin 6s linear infinite;
   z-index: -2;
@@ -107,10 +113,8 @@ form#search::after {
   content: "";
   position: absolute;
   inset: 3px;
-
   background: #111;
   border-radius: 11px;
-
   z-index: -1;
 }
 
