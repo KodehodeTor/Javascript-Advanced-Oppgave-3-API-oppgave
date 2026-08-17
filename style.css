@@ -33,6 +33,7 @@ p {
   font-size: 15px;
   font-weight: bolder;
   margin-bottom: 25px;
+  z-index: 1;
 }
 
 a {
@@ -76,9 +77,47 @@ form {
   align-items: end;
 
   gap: 5px;
-  max-height: 90px;
+  max-height: 100px;
   min-width: 880px;
   max-width: 880px;
+}
+
+form#search {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+form#search:before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0%,
+    #ffcc00 15%,
+    transparent 30%
+  );
+  animation: spin 6s linear infinite;
+  z-index: -2;
+}
+
+form#search::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+
+  background: #111;
+  border-radius: 11px;
+
+  z-index: -1;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 input,
@@ -90,6 +129,7 @@ select {
   border-radius: 5px;
   padding: 8px 10px;
   font-size: 1rem;
+  z-index: 5;
 }
 
 input option:checked,
@@ -115,13 +155,12 @@ label {
 #full_search {
   /* width: 90%; */
   margin: 10px auto 30px;
-  padding-bottom: 15px;
   background: rgba(15, 15, 15, 0.85);
-  border: 1px solid #555;
-  border-radius: 12px;
   box-shadow:
     0 0 20px rgba(0, 0, 0, 0.8),
     inset 0 0 20px rgba (255, 255, 255, 0.03);
+  border: 1px solid #555;
+  border-radius: 12px;
 }
 
 /* BUTTON */
@@ -156,7 +195,7 @@ button:hover {
   gap: 20px;
   padding: 20px;
   box-sizing: border-box;
-  margin-bottom: 50px;
+  margin-bottom: 300px;
 }
 
 .card {
