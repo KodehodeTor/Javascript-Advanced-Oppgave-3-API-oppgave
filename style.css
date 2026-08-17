@@ -81,7 +81,6 @@ form {
     1fr
     80px;
   align-items: end;
-
   gap: 5px;
   min-width: 880px;
   max-width: 880px;
@@ -116,6 +115,7 @@ form#search::after {
   background: #111;
   border-radius: 11px;
   z-index: -1;
+  width: 1000px;
 }
 
 @keyframes borderSpin {
@@ -149,14 +149,19 @@ select:focus {
   box-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
 }
 
-/* ISSUES WITH COMMANDER DROPDOWN MENU! */
+input#commander,
+select#commander {
+  width: 100px;
+  margin-left: -25px;
+}
+
+/* ISSUES WITH COMMANDER DROPDOWN MENU! it now goes out of the form box. */
 
 label {
-  padding-left: 10px;
   font-size: 1.1rem;
   padding-bottom: 10px;
-  padding-right: 10px;
-  width: 110px;
+
+  width: 90px;
 }
 
 #full_search {
