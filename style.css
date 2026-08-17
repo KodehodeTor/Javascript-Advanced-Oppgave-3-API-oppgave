@@ -124,6 +124,7 @@ form#search::after {
   }
 }
 
+/* ONGOING ISSUE: Changing commander drop down menu resizes the search button */
 input,
 select {
   appearance: base-select;
