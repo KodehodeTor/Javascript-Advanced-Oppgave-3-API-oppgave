@@ -185,6 +185,7 @@ button {
   background: linear-gradient(#e2bd45, #9b7415);
   font-weight: bolder;
   font-size: 15px;
+  width: 240px;
 }
 
 #load_btn {

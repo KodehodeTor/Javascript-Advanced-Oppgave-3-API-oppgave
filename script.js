@@ -122,7 +122,13 @@ function createCard(cardInfo) {
   div.className = "card";
 
   const p = document.createElement("p");
-  let textP = document.createTextNode(cardInfo.name);
+
+  //Cleaning up card name to avoid double sided card names
+  let cardName = cardInfo.name;
+  if (cardName.includes("//")) {
+    cardName = cardName.split("//")[0].trim();
+  }
+  let textP = document.createTextNode(cardName);
 
   const img = document.createElement("img");
   if (cardInfo.image_uris) {
@@ -131,7 +137,7 @@ function createCard(cardInfo) {
   } else if (cardInfo.card_faces) {
     img.src = cardInfo.card_faces[0].image_uris.normal;
   }
-  img.alt = cardInfo.name;
+  img.alt = cardName;
 
   //Apend to html
   p.append(textP);
