@@ -83,12 +83,9 @@ form {
   align-items: end;
 
   gap: 5px;
-  max-height: 100px;
   min-width: 880px;
   max-width: 880px;
 }
-
-/* Minor issue: The border animation works too fast around the corners and is slight visible at both top and bottom when circling around. */
 
 form#search {
   position: relative;
@@ -104,10 +101,11 @@ form#search:before {
   background: conic-gradient(
     from var(--angle),
     transparent 0deg,
-    #ffcc00 40deg,
-    transparent 130deg
+    transparent 35deg,
+    #ffcc00 60deg,
+    transparent 100deg
   );
-  animation: borderSpin 6s linear infinite;
+  animation: borderSpin 8s linear infinite;
   z-index: -2;
 }
 
@@ -122,11 +120,10 @@ form#search::after {
 
 @keyframes borderSpin {
   to {
-    transform: rotate(360deg);
+    --angle: 360deg;
   }
 }
 
-/* ONGOING ISSUE: Changing commander drop down menu resizes the search button (we can also add some padding to the form box (how?) */
 input,
 select {
   appearance: base-select;
@@ -142,11 +139,7 @@ select {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-input option:checked,
-select:checked {
-  color: white;
+  width: 176px;
 }
 
 input:focus,
@@ -156,16 +149,17 @@ select:focus {
   box-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
 }
 
+/* ISSUES WITH COMMANDER DROPDOWN MENU! */
+
 label {
   padding-left: 10px;
   font-size: 1.1rem;
   padding-bottom: 10px;
   padding-right: 10px;
-  max-width: 135px;
+  width: 110px;
 }
 
 #full_search {
-  /* width: 90%; */
   margin: 10px auto 30px;
   background: rgba(15, 15, 15, 0.85);
   box-shadow:
