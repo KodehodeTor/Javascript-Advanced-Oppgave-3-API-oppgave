@@ -63,19 +63,5 @@
     <main id="cards"></main>
     <!-- Loading spinner -->
     <div id="loading_spinner" class="spinner" style="display: none"></div>
-
-    <!-- JAVASCRIPT for centering card names and cutting away " //...." (double sided names) ISSUE: DOUBLE SIDED CARDS NOT CENTERED PROPERLY-->
-
-    <script>
-      function cleanCardText() {
-        const cardP = document.querySelectorAll(".card p");
-        cardP.forEach((p) => {
-          if (p.textContent.includes(" // ")) {
-            p.textContent = p.textContent.split(" // ")[0].slice;
-          }
-        });
-      }
-      document.addEventListener("DOMContentLoaded", cleanCardText);
-    </script>
   </body>
 </html>
