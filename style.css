@@ -115,7 +115,7 @@ form#search::after {
   background: #111;
   border-radius: 11px;
   z-index: -1;
-  width: 1000px;
+  /* width: 1000px; */
 }
 
 @keyframes borderSpin {
@@ -160,7 +160,6 @@ select#commander {
 label {
   font-size: 1.1rem;
   padding-bottom: 10px;
-
   width: 90px;
 }
 

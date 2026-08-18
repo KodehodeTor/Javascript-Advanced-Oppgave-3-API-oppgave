@@ -71,7 +71,7 @@
         const cardP = document.querySelectorAll(".card p");
         cardP.forEach((p) => {
           if (p.textContent.includes(" // ")) {
-            p.textContent = p.textContent.split(" // ")[0].trim;
+            p.textContent = p.textContent.split(" // ")[0].slice;
           }
         });
       }
