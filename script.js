@@ -3,7 +3,7 @@ import { createCard } from "./createCard.js";
 
 // API source
 const scryapi = "https://api.scryfall.com";
-
+const cardCont = document.querySelector("#cards");
 const search = document.querySelector("#search");
 
 // Search function
@@ -19,7 +19,10 @@ search.addEventListener("submit", function (e) {
   const commander = document.querySelector("#commander").value;
 
   let query = "";
-
+  //Search logic
+  if (query === "") {
+    alert("Please filter search");
+  }
   if (color) {
     query += `color:${color} `;
   }
@@ -35,7 +38,6 @@ search.addEventListener("submit", function (e) {
   if (commander) {
     query += `commander:${commander} `;
   }
-
   console.log("Scryfall query:", query);
   //encodes a specific component of a URI by replacing special characters with UTF-8.
   getData(`${scryapi}/cards/search?q=${encodeURIComponent(query)}`);
