@@ -1,3 +1,5 @@
+//Creates card, removes double face card name (//)
+
 const cardCont = document.querySelector("#cards");
 
 export function createCard(cardInfo) {
@@ -11,8 +13,7 @@ export function createCard(cardInfo) {
   if (cardName.includes("//")) {
     cardName = cardName.split("//")[0].trim();
   }
-
-  // slice(0,10).foreach(blabla =>)
+  // slice(0,10).foreach( =>)
   let textP = document.createTextNode(cardName);
 
   const img = document.createElement("img");

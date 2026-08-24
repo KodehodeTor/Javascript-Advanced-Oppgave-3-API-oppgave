@@ -136,7 +136,16 @@ form#search::after {
   background: #111;
   border-radius: 11px;
   z-index: -1;
-  /* width: 1000px; */
+}
+
+@media (max-width: 600px) {
+  form#search {
+    grid-template-columns: 1fr 1fr;
+    min-width: 0;
+    width: 100%;
+  }
+  select#commander {
+  }
 }
 
 @keyframes borderSpin {
