@@ -6,5 +6,3 @@ NOTES
 
 // Need a box on the top where you can save your cards and follow pricing trends in cardmarket etc.
 // Delete individual cards from the save_box
-
-// CARDS FOUND FUNCTION! Founx x amount of cards appended on top
