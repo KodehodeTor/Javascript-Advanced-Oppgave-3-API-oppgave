@@ -275,6 +275,12 @@ button:hover {
     box-sizing: border-box;
     margin-bottom: 300px;
   }
+  button#submit_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -295,6 +301,12 @@ button:hover {
     padding: 20px;
     box-sizing: border-box;
     margin-bottom: 300px;
+  }
+  button#submit_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200%;
   }
 }
 
