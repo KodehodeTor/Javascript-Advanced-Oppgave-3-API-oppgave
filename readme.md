@@ -20,3 +20,10 @@ Card -> CLick -> LocalStorage -> Hero
 
 second step:
 market data on saved hero cards
+
+script.js | search/form/events
+scryfall.js | scryfall API
+createCard.js | creating html card
+storage.js | LocalStorage
+hero.js | Saved cards + hero section
+market.js | cardmarket prices
