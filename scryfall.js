@@ -1,5 +1,6 @@
 import { displayData } from "./script.js";
 import { toggleLoadMoreButton } from "./script.js";
+
 export let nextUrl = null;
 
 let allLoadedCards = [];

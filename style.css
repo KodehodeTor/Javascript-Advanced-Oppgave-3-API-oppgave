@@ -202,6 +202,7 @@ button {
 
 #load_btn {
   margin-right: 5px;
+  margin-top: 15px;
 }
 
 button:hover {
@@ -251,7 +252,7 @@ button:hover {
   margin: 20px auto;
   position: fixed;
   z-index: 1;
-  top: 320px;
+  top: 370px;
 }
 
 /* Media Querie and keyframes */
@@ -291,7 +292,7 @@ button:hover {
     margin: 20px auto;
     position: fixed;
     z-index: 1;
-    top: 420px;
+    top: 530px;
   }
 }
 
@@ -306,7 +307,6 @@ button:hover {
     transform: translatex(1.55rem);
   }
   #cards {
-    margin-top: 100px;
     display: grid;
     grid-template-columns: repeat(1, 200px);
     gap: 20px;
@@ -330,7 +330,7 @@ button:hover {
     margin: 20px auto;
     position: fixed;
     z-index: 1;
-    top: 420px;
+    top: 530px;
   }
 }
 

@@ -3,6 +3,7 @@ import { createCard } from "./createCard.js";
 
 // API source
 const scryapi = "https://api.scryfall.com";
+//HTML elements
 const cardCont = document.querySelector("#cards");
 const search = document.querySelector("#search");
 
