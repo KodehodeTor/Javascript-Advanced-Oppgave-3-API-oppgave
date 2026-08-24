@@ -168,8 +168,6 @@ select#commander {
   margin-left: -25px;
 }
 
-/* ISSUES WITH COMMANDER DROPDOWN MENU! it now goes out of the form box. */
-
 label {
   font-size: 1.1rem;
   padding-bottom: 10px;

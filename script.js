@@ -92,4 +92,3 @@ export function displayData(data) {
 // Delete individual cards from the save_box
 
 // CARDS FOUND FUNCTION! Founx x amount of cards appended on top
-// MEDIA QUERIES!
