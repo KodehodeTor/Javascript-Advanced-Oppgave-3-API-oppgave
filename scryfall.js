@@ -27,6 +27,13 @@ export async function getData(url, isNextPage = false) {
         }
         //Append new array of 175 to list
         allLoadedCards = allLoadedCards.concat(data.data);
+
+        //Card counter:
+        const counterElement = document.getElementById("card_counter");
+        if (counterElement) {
+          counterElement.textContent = `Showing ${allLoadedCards.length} of ${data.total_cards || 0} cards`;
+        }
+
         //Save next page URL
         nextUrl = data.has_more ? data.next_page : null;
         //Display updated array
