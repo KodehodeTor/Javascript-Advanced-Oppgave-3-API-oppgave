@@ -14,3 +14,9 @@ Scryfall API > Search Cards -> Click a card -> Save selected card: LocalStorage 
 SelectedCards
 CardMarketPrices
 top 10 increasing cards.
+
+first step:
+Card -> CLick -> LocalStorage -> Hero
+
+second step:
+market data on saved hero cards
