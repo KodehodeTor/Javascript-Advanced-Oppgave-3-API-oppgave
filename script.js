@@ -20,9 +20,7 @@ search.addEventListener("submit", function (e) {
 
   let query = "";
   //Search logic
-  if (query === "") {
-    alert("Please filter search");
-  }
+
   if (color) {
     query += `color:${color} `;
   }
@@ -37,6 +35,9 @@ search.addEventListener("submit", function (e) {
   }
   if (commander) {
     query += `commander:${commander} `;
+  }
+  if (query === "") {
+    alert("Please filter search");
   }
   console.log("Scryfall query:", query);
   //encodes a specific component of a URI by replacing special characters with UTF-8.
