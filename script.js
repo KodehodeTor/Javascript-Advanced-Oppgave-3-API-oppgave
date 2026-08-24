@@ -3,6 +3,7 @@ import { createCard } from "./createCard.js";
 
 // API source
 const scryapi = "https://api.scryfall.com";
+
 //HTML elements
 const cardCont = document.querySelector("#cards");
 const search = document.querySelector("#search");
@@ -20,8 +21,8 @@ search.addEventListener("submit", function (e) {
   const commander = document.querySelector("#commander").value;
 
   let query = "";
-  //Search logic
 
+  //Search logic
   if (color) {
     query += `color:${color} `;
   }
@@ -37,6 +38,7 @@ search.addEventListener("submit", function (e) {
   if (commander) {
     query += `commander:${commander} `;
   }
+  //If nothing was chosen, alert to filter. (Its a must)
   if (query === "") {
     alert("Please filter search");
   }
