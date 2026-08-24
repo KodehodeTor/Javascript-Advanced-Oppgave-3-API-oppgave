@@ -13,11 +13,11 @@ export function createCard(cardInfo) {
   if (cardName.includes("//")) {
     cardName = cardName.split("//")[0].trim();
   }
-
+  //centers the title after double face name is removed
   p.style.textAlign = "center";
-
+  //Creates the title
   let textP = document.createTextNode(cardName);
-
+  //Creates img card
   const img = document.createElement("img");
   if (cardInfo.image_uris) {
     //If uri is normal, display normal card.(cardInfo->uris->normal) If not; the structure is different. (cardInfo->card_faces->[0]->image_uris->normal)

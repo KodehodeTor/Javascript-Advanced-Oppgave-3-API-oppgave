@@ -4,8 +4,8 @@
 
 // Psuedo:
 
-// display the img and p stored into hero section.
-// const cardApp = document.querySelector('div.card')
+// const cards.
+
 //herocard = document.querySelector('herocard')
 
 // herocard.innerHTML = localStorage.getItem("value")
