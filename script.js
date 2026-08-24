@@ -1,4 +1,4 @@
-import { getData } from "./scryfall.js";
+import { getData, nextUrl } from "./scryfall.js";
 import { createCard } from "./createCard.js";
 
 // API source
@@ -44,16 +44,18 @@ search.addEventListener("submit", function (e) {
   getData(`${scryapi}/cards/search?q=${encodeURIComponent(query)}`);
 });
 
-let nextUrl = null;
+//Displays data:
+export function displayData(data) {
+  //If there is any data, return "Current array of cards: array"
+  if (!data) return;
+  //Clear container to avoid duplicates
+  cardCont.innerHTML = "";
 
-//Runs when clicking "load more"
-function loadNextPage() {
-  if (nextUrl) {
-    setTimeout(() => {
-      //Scryfall needs 100ms delay for requests.
-      getData(nextUrl, true);
-    }, 100);
-  }
+  console.log("Current array of cards:", data);
+  //For each data create a card
+  data.forEach((e) => {
+    createCard(e);
+  });
 }
 
 //Eventlistner for load button
@@ -70,16 +72,12 @@ export function toggleLoadMoreButton() {
   }
 }
 
-//Displays data:
-export function displayData(data) {
-  //If there is any data, return "Current array of cards: array"
-  if (!data) return;
-  //Clear container to avoid duplicates
-  cardCont.innerHTML = "";
-
-  console.log("Current array of cards:", data);
-  //For each data create a card
-  data.forEach((e) => {
-    createCard(e);
-  });
+//Runs when clicking "load more"
+export function loadNextPage() {
+  if (nextUrl) {
+    setTimeout(() => {
+      //Scryfall needs 100ms delay for requests.
+      getData(nextUrl, true);
+    }, 100);
+  }
 }

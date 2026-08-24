@@ -1,8 +1,8 @@
 import { displayData } from "./script.js";
 import { toggleLoadMoreButton } from "./script.js";
+export let nextUrl = null;
 
 let allLoadedCards = [];
-let nextUrl = null;
 
 //Function for getting data, load next array. Includes loading spinner.
 export async function getData(url, isNextPage = false) {
