@@ -145,6 +145,8 @@ form#search::after {
     width: 100%;
   }
   select#commander {
+    width: 100%;
+    transform: translatex(1.55rem);
   }
 }
 
@@ -164,7 +166,6 @@ select {
   padding: 8px 10px;
   font-size: 1rem;
   z-index: 5;
-  width: 100%;
   min-width: 0;
   white-space: nowrap;
   overflow: hidden;
