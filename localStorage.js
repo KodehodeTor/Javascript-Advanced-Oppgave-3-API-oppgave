@@ -7,7 +7,7 @@ export function savedCard(card) {
   const savedCards = loadedSavedCards();
 
   //Checks if there are any duplicates.
-  const existingIndex = savedCards.findIndex((e) => c.name === card.name);
+  const existingIndex = savedCards.findIndex((c) => c.name === card.name);
   if (existingIndex !== -1) {
     savedCards[existingIndex] = card;
   } else {
