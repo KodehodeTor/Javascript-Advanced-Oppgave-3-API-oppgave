@@ -251,35 +251,29 @@ button:hover {
   margin-bottom: 25px;
 }
 
-#hero .remove_btn {
-  opacity: 0;
-}
-
-#hero p {
-  opacity: 0;
-}
-
-div#saved_cards {
+#saved_cards_static {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 20px;
-}
-
-.saved_card {
-  flex: 0 0 200px;
-}
-
-.saved_card img {
   width: 100%;
-  display: block;
+  margin-top: 20px;
 }
 
-main#saved_cards {
+#saved_cards {
   display: flex;
   justify-content: center;
   gap: 15px;
-  width: 1000px;
+  width: max-content;
   overflow: hidden;
-  outline: 2px solid red;
+}
+
+#saved_cards p {
+  opacity: 0;
+}
+
+#saved_cards .remove_btn {
+  opacity: 0;
 }
 
 .saved_card {
@@ -299,7 +293,8 @@ main#saved_cards {
 
 #hero_card {
 }
-*/ .remove_btn {
+
+.remove_btn {
   display: flex;
   font-size: 12px;
   height: 30px;

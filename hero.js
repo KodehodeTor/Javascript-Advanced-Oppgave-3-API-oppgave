@@ -2,6 +2,9 @@ import { loadedSavedCards, removeCard } from "./localStorage.js";
 
 const heroCard = document.querySelector("#hero_card");
 const savedCardCont = document.querySelector("#saved_cards");
+const staticCardCont = document.querySelector("#saved_cards_static");
+console.log("Animated container:", savedCardCont);
+console.log("Static container:", staticCardCont);
 
 export function displayHero(card) {
   if (!heroCard) return;
@@ -15,30 +18,44 @@ export function displayHero(card) {
 
 //append saved cards in hero section
 export function displaySavedCards() {
-  if (!savedCardCont) return;
+  if (!savedCardCont || !staticCardCont) return;
 
   savedCardCont.innerHTML = "";
+  staticCardCont.innerHTML = "";
 
   const savedCards = loadedSavedCards();
+  console.log("Saved cards:", savedCards.length);
 
   //no saved cards
   if (savedCards.length === 0) {
     savedCardCont.innerHTML = `<p class="no_saved_cards">No saved cards yet</p>`;
     return;
   }
-  //create cards
+
+  //Animate cards
   savedCards.forEach((card) => {
-    createSavedCard(card);
+    createSavedCard(card, savedCardCont);
   });
 
-  //Only start carousel if enough cards
+  console.log("Creating static cards...");
+  //Stationary cards
+  savedCards.forEach((card) => {
+    createSavedCard(card, staticCardCont);
+  });
+
+  console.log(
+    "Static cards actually in DOM:",
+    staticCardCont.querySelectorAll(".saved_card").length,
+  );
+
+  //Start animation
   if (savedCards.length >= 2) {
     startCarousel(savedCards);
   }
 }
 
 //Create saved card
-function createSavedCard(card) {
+function createSavedCard(card, container) {
   const element = document.createElement("div");
 
   element.className = "saved_card";
@@ -49,7 +66,7 @@ function createSavedCard(card) {
        
         <button data-name="${card.name}" class="remove_btn">Remove</button>
         `;
-  savedCardCont.appendChild(element);
+  container.appendChild(element);
 }
 
 // Start carousel
@@ -57,7 +74,7 @@ function createSavedCard(card) {
 function startCarousel(savedCards) {
   //Duplicate cards:
   savedCards.forEach((card) => {
-    createSavedCard(card);
+    createSavedCard(card, savedCardCont);
   });
 
   const cards = savedCardCont.querySelectorAll(".saved_card");
