@@ -80,7 +80,7 @@ function startCarousel(savedCards) {
       },
     ],
     {
-      duration: 20000,
+      duration: 50000,
       iterations: Infinity,
       easing: "linear",
     },

@@ -244,14 +244,24 @@ button:hover {
 /* SAVED CARDS / HERO SECTION */
 
 #hero {
-  width: 100%;
+  width: 1200px;
   overflow: hidden;
+  border-radius: 25px;
+  border: 1px solid #d4af37;
+  margin-bottom: 25px;
 }
 
-#saved_cards {
+#hero .remove_btn {
+  opacity: 0;
+}
+
+#hero p {
+  opacity: 0;
+}
+
+div#saved_cards {
   display: flex;
   gap: 20px;
-  width: max-content;
 }
 
 .saved_card {
@@ -263,7 +273,7 @@ button:hover {
   display: block;
 }
 
-/* main#saved_cards {
+main#saved_cards {
   display: flex;
   justify-content: center;
   gap: 15px;
@@ -275,8 +285,7 @@ button:hover {
 .saved_card {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-/* } */
+}
 
 .saved_card img {
   width: 200px;
