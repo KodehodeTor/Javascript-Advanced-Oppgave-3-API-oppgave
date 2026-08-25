@@ -1,3 +1,6 @@
+import { displaySavedCards } from "./hero.js";
+import { savedCard } from "./localStorage.js";
+
 //Creates card, removes double face card name (//)
 
 const cardCont = document.querySelector("#cards");
@@ -27,9 +30,28 @@ export function createCard(cardInfo) {
   }
   img.alt = cardName;
 
+  const price = cardInfo.prices?.eur || null;
+
+  //Store data
+  div.dataset.name = cardName;
+  div.dataset.image = imageUrl;
+  div.dataset.price = price || "";
+
   //Apend to html
   p.append(textP);
   div.appendChild(p);
   div.appendChild(img);
   cardCont.appendChild(div);
+
+  //Click to save
+
+  div.addEventListener("click", () => {
+    const card = {
+      name: div.dataset.name,
+      image: div.dataset.image,
+      price: div.dataset.price || null,
+    };
+    displaySavedCards(card);
+    savedCard(card);
+  });
 }
