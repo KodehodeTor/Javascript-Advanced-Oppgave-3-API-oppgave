@@ -22,12 +22,14 @@ export function createCard(cardInfo) {
   let textP = document.createTextNode(cardName);
   //Creates img card
   const img = document.createElement("img");
+  let imageUrl = "";
   if (cardInfo.image_uris) {
     //If uri is normal, display normal card.(cardInfo->uris->normal) If not; the structure is different. (cardInfo->card_faces->[0]->image_uris->normal)
-    img.src = cardInfo.image_uris.normal;
+    imageUrl = cardInfo.image_uris.normal;
   } else if (cardInfo.card_faces) {
-    img.src = cardInfo.card_faces[0].image_uris.normal;
+    imageUrl = cardInfo.card_faces[0].image_uris.normal;
   }
+  img.src = imageUrl;
   img.alt = cardName;
 
   const price = cardInfo.prices?.eur || null;
