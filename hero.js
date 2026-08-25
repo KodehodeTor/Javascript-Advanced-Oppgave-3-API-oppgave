@@ -1,4 +1,4 @@
-import { loadedSavedCards, removeCard } from "./localStorage.js";
+import { loadedSavedCards, removeCard, savedCard } from "./localStorage.js";
 
 const heroCard = document.querySelector("#hero_card");
 const savedCardCont = document.querySelector("#saved_cards");
@@ -6,6 +6,9 @@ const savedCardCont = document.querySelector("#saved_cards");
 //append saved cards in hero section
 
 export function displaySavedCards() {
+  const savedCards = loadedSavedCards();
+  savedCardCont.innerHTML = "";
+
   if (!savedCardCont) return;
 
   savedCards.forEach((card) => {
