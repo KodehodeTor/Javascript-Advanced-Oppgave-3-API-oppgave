@@ -107,7 +107,22 @@ function startCarousel(savedCards) {
 //remove clicker
 if (savedCardCont) {
   savedCardCont.addEventListener("click", (e) => {
-    if (e.target.matches(".remove_btn")) removeCard(e.target.dataset.name);
+    const removeBtn = e.target.closest(".remove_btn");
+
+    if (!removeBtn) return;
+
+    removeCard(removeBtn.dataset.name);
+    displaySavedCards();
+  });
+}
+
+if (staticCardCont) {
+  staticCardCont.addEventListener("click", (e) => {
+    const removeBtn = e.target.closest(".remove_btn");
+
+    if (!removeBtn) return;
+
+    removeCard(removeBtn.dataset.name);
     displaySavedCards();
   });
 }
