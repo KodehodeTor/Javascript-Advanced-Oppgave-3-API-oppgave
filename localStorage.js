@@ -31,6 +31,6 @@ export function loadedSavedCards() {
 
 //Removes saved card
 export function removeCard(cardName) {
-  const savedCards = loadedSavedCards().filter((e) => c.name !== cardName);
+  const savedCards = loadedSavedCards().filter((c) => c.name !== cardName);
   localStorage.setItem(storage_key, JSON.stringify(savedCards));
 }
