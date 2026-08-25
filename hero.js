@@ -23,8 +23,9 @@ export function displaySavedCards() {
     const element = document.createElement("div");
     element.className = "saved_card";
     element.innerHTML = `
+     <p>${card.name}</p>
         <img src="${card.image}" alt="${card.name}">
-        <p>${card.name}</p>
+       
         <button data-name="${card.name}" class="remove_btn">Remove</button>
         `;
     savedCardCont.appendChild(element);
