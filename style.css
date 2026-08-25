@@ -259,6 +259,7 @@ button:hover {
 #saved_cards {
   display: flex;
   justify-content: center;
+  gap: 10px;
 }
 
 #hero_card {
