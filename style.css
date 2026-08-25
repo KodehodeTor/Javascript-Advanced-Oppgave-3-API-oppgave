@@ -243,7 +243,19 @@ button:hover {
 
 /* SAVED CARDS / HERO SECTION */
 
+main#saved_cards {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  width: 1000px;
+  overflow: hidden;
+  outline: 2px solid red;
+}
+
 .saved_card {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
 }
 
 .saved_card img {
@@ -254,12 +266,6 @@ button:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   display: block;
   filter: drop-shadow(0px 0px 30px rgba(255, 255, 255, 0.2));
-}
-
-#saved_cards {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
 }
 
 #hero_card {
@@ -273,6 +279,7 @@ button:hover {
   text-align: center;
   justify-content: center;
 }
+
 /* SPINNER */
 
 .spinner {
