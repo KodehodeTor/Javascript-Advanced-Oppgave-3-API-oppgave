@@ -45,7 +45,8 @@ export async function getData(url, isNextPage = false) {
       .catch((err) => console.log("Fetch Error: ", err))
       // Stops the loading spinner from spinning after loading
       .finally((e) => {
-        document.querySelector("#loading_spinner").style.display = "none";
+        const spinner = document.querySelector("#loading_spinner");
+        if (spinner) spinner.style.display = "none";
       });
   }
 }
