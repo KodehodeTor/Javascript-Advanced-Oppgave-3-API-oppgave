@@ -1,7 +1,7 @@
 import { loadedSavedCards, removeCard } from "./localStorage.js";
 
 const heroCard = document.querySelector("#hero_card");
-const savedCardCont = document.querySelector("#saved_cards");
+const savedCardCont = document.querySelector(".saved_cards");
 
 export function displayHero(card) {
   if (!heroCard) return;

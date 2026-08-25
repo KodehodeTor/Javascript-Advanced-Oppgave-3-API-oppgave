@@ -246,19 +246,38 @@ button:hover {
 .saved_card {
 }
 
+.saved_card::-webkit-scrollbar {
+  display: none;
+}
+
 .saved_card img {
+  flex: 0 0 5em;
   width: 200px;
   height: 280px;
   aspect-ratio: 5/7;
   border-radius: 4.75% / 3.5%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  display: block;
   filter: drop-shadow(0px 0px 30px rgba(255, 255, 255, 0.2));
 }
 
-#saved_cards {
+@keyframes cardloop {
+  from {
+    translate: 0;
+  }
+  to {
+    translate: -100%;
+  }
+}
+
+/* GROUP  */
+.saved_cards {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  margin: 100px auto;
+  width: 90%;
+  overflow-x: auto;
+  animation: cardloop 5s infinite linear;
 }
 
 #hero_card {
