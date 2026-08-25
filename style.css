@@ -252,12 +252,10 @@ button:hover {
   display: flex;
   gap: 20px;
   width: max-content;
-  align-items: center;
 }
 
 .saved_card {
-  width: 200px;
-  flex-shrink: 0;
+  flex: 0 0 200px;
 }
 
 .saved_card img {
