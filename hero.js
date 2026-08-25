@@ -19,6 +19,12 @@ export function displaySavedCards() {
   savedCardCont.innerHTML = "";
   const savedCards = loadedSavedCards();
 
+  //no saved cards
+  if (savedCards.lenght === 0) {
+    savedCardCont.innerHTML = `<p class="no_saved_cards">No saved cards yet</p>`;
+    return;
+  }
+
   savedCards.forEach((card) => {
     const element = document.createElement("div");
     element.className = "saved_card";
