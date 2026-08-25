@@ -223,6 +223,7 @@ button:hover {
 
 .card {
   color: whitesmoke;
+  cursor: pointer;
 }
 
 .card p {

@@ -32,7 +32,6 @@ export function displaySavedCards() {
 }
 
 //remove clicker
-
 if (savedCardCont) {
   savedCardCont.addEventListener("click", (e) => {
     if (e.target.matches(".remove_btn")) removeCard(e.target.dataset.name);

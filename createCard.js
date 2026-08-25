@@ -46,7 +46,6 @@ export function createCard(cardInfo) {
   cardCont.appendChild(div);
 
   //Click to save
-
   div.addEventListener("click", () => {
     const card = {
       name: div.dataset.name,
