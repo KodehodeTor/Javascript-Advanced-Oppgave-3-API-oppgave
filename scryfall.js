@@ -24,7 +24,7 @@ export async function getData(url, isNextPage = false) {
       //If its a new search, clear old array.
       .then((data) => {
         if (data.object === "error") {
-          console.log("scryfall error:", data.details);
+          console.log("Scryfall error:", data.details);
           const counterElement = document.getElementById("card_counter");
           if (counterElement) counterElement.textContent = "No cards found";
           return;
