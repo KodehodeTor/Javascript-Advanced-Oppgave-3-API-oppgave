@@ -241,25 +241,17 @@ button:hover {
   filter: drop-shadow(0px 0px 30px rgba(255, 255, 255, 0.2));
 }
 
-/* SAVED CARDS / HERO SECTION */
+/* HERO SECTION */
 
 #hero {
   width: 1200px;
   overflow: hidden;
   border-radius: 25px;
-  border: 1px solid #d4af37;
+  /* border: 1px solid #d4af37; */
   margin-bottom: 25px;
 }
 
-#saved_cards_static {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  width: 100%;
-  margin-top: 20px;
-}
-
+/* Animated cards */
 #saved_cards {
   display: flex;
   justify-content: center;
@@ -274,6 +266,17 @@ button:hover {
 
 #saved_cards .remove_btn {
   opacity: 0;
+}
+
+/* Static cards */
+
+#saved_cards_static {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
 }
 
 .saved_card {
@@ -291,8 +294,8 @@ button:hover {
   filter: drop-shadow(0px 0px 30px rgba(255, 255, 255, 0.2));
 }
 
-#hero_card {
-}
+/* #hero_card {
+} */
 
 .remove_btn {
   display: flex;
@@ -316,6 +319,29 @@ button:hover {
   position: fixed;
   z-index: 1;
   top: 370px;
+}
+/* The wrapper hides the content by default using 0fr */
+.content-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease-out; /* Smooth transition speed */
+  overflow: hidden;
+}
+
+/* When JavaScript adds the .open class, it expands smoothly */
+.content-wrapper.open {
+  grid-template-rows: 1fr;
+}
+
+/* Required so the grid can properly calculate its inner height */
+.inner-content {
+  min-height: 0;
+}
+
+/* Optional styling for your toggle button */
+.toggle-btn {
+  padding: 8px 16px;
+  cursor: pointer;
 }
 
 /* Media Querie and keyframes */

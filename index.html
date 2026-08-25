@@ -55,12 +55,27 @@
       </form>
     </div>
 
-    <!-- Herso Section -->
+    <!-- Hero Section -->
     <section id="hero">
       <!-- Animated carousel -->
       <main id="saved_cards"></main>
-      <!-- Static saved cards -->
-      <div id="saved_cards_static"></div>
+
+      <!-- Static saved cards (Collapsible Section) -->
+      <div class="collapsible-container">
+        <!-- Clean, semantic toggle button -->
+        <button class="toggle-btn" onclick="toggleSection()">
+          Toggle Section
+        </button>
+
+        <!-- This wrapper controls the smooth height expansion -->
+        <div class="content-wrapper" id="myContent">
+          <!-- Inner block ensures the content calculates height correctly -->
+          <div class="inner-content">
+            <div id="saved_cards_static"></div>
+            <p>This section smoothly minimizes and expands using CSS grid.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <div id="hero_card"></div>
@@ -75,5 +90,12 @@
     <main id="cards"></main>
     <!-- Loading spinner -->
     <div id="loading_spinner" class="spinner" style="display: none"></div>
+
+    <script>
+      function toggleSection() {
+        const content = document.getElementById("myContent");
+        content.classList.toggle("open");
+      }
+    </script>
   </body>
 </html>
