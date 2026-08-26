@@ -1,0 +1,55 @@
+/* BUTTON */
+
+button {
+  margin-right: -82px;
+  position: relative;
+  z-index: 1;
+  padding: 9px 80px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: black;
+  background: linear-gradient(#e2bd45, #9b7415);
+  font-weight: bolder;
+  font-size: 15px;
+  width: 240px;
+}
+
+#load_btn {
+  margin-right: 5px;
+  margin-top: 15px;
+}
+
+button:hover {
+  box-shadow: 0 0 15px rgba(245, 199, 66, 0.5);
+}
+
+/* Button for cards */
+.remove_btn {
+  display: flex;
+  font-size: 12px;
+  height: 30px;
+  width: 50px;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Toggle section */
+.content-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease-out; /* Smooth transition speed */
+  overflow: hidden;
+}
+
+.content-wrapper.open {
+  grid-template-rows: 1fr;
+}
+
+.inner-content {
+  min-height: 0;
+}
+
+.toggle-btn {
+  padding: 8px 16px;
+  cursor: pointer;
+}

@@ -1,0 +1,36 @@
+/* Load Spinner */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #dbd030;
+  border-radius: 50%;
+  animation: spinnerSpin 1s linear infinite;
+  margin: 20px auto;
+  position: fixed;
+  z-index: 1;
+  top: 370px;
+}
+
+/* Keyframes for animations */
+
+@keyframes spinnerSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes borderSpin {
+  to {
+    --angle: 360deg;
+  }
+}
+
+/* Property for gradient border effect */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}

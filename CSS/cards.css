@@ -1,0 +1,87 @@
+/* CARDS */
+
+#cards {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 300px;
+}
+
+.card {
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+.card p {
+  max-height: 16px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 200px;
+  height: 280px;
+  aspect-ratio: 5/7;
+  border-radius: 4.75% / 3.5%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: block;
+  filter: drop-shadow(0px 0px 30px rgba(255, 255, 255, 0.2));
+}
+
+/* HERO SECTION */
+
+#hero {
+  width: 1200px;
+  overflow: hidden;
+  border-radius: 25px;
+  /* border: 1px solid #d4af37; */
+  margin-bottom: 25px;
+}
+
+/* Animated cards */
+#saved_cards {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  width: max-content;
+  overflow: hidden;
+}
+
+#saved_cards p {
+  opacity: 0;
+}
+
+#saved_cards .remove_btn {
+  opacity: 0;
+}
+
+/* Static cards */
+
+#saved_cards_static {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.saved_card {
+  display: flex;
+  flex-direction: column;
+}
+
+.saved_card img {
+  width: 200px;
+  height: 280px;
+  aspect-ratio: 5/7;
+  border-radius: 4.75% / 3.5%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: block;
+  filter: drop-shadow(0px 0px 30px rgba(255, 255, 255, 0.2));
+}
+
+/* #hero_card {
+} */
