@@ -72,6 +72,13 @@
 .saved_card {
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+
+  .saved_card:hover {
+    transform: scale(1.2);
+    z-index: 10;
+  }
 }
 
 .saved_card img {
