@@ -103,12 +103,34 @@ function startCarousel(savedCards) {
   );
 
   //Pause animation on hover
-  savedCardCont.addEventListener("mouseenter", () => {
+  savedCardCont.addEventListener("mouseover", (c) => {
+    const card = c.target.closest(".saved_card");
+    if (!card) return;
+
     animation.pause();
+    card.style.transform = "scale(1.2)";
+    card.style.zIndex = "99";
+  });
+
+  //If mouse leaves a card:
+  savedCardCont.addEventListener("mouseout", (c) => {
+    const card = c.target.closest(".saved_card");
+    if (!card) return;
+
+    card.style.transform = "scale(1)";
+    card.style.zIndex = "1";
+
+    if (!savedCardCont.contains(c.relatedTarget)) {
+      animation.play();
+    }
   });
 
   savedCardCont.addEventListener("mouseleave", () => {
     animation.play();
+    cards.forEach((card) => {
+      card.style.transform = "scale(1)";
+      card.style.zIndex = "1";
+    });
   });
 }
 
