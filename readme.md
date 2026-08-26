@@ -1,30 +1,36 @@
 NOTES
 
 //NOTES & FUTURE PLANS
-// Card saver (localStorage)
-// Split up readme.md for better readability.
-// When click cards, have save option, go to Cardmarket option and a select option (for mass additions of cards)
 
-// Need a box on the top where you can save your cards and follow pricing trends in cardmarket etc.
-// Delete individual cards from the save_box
+## DONE: ✅
 
-//LocalStoreage psuedo logic:
+Card saver (localStorage) ✅
+Delete individual cards from the save_box ✅
 
-Scryfall API > Search Cards -> Click a card -> Save selected card: LocalStorage -> Hero section:
+## HALF DONE:
 
-SelectedCards
-CardMarketPrices
-top 10 increasing cards.
+When click cards, have save option, go to Cardmarket option and a select option (for mass additions of cards)
+--missing cardmarket option---
 
-first step:
-Card -> CLick -> LocalStorage -> Hero
+Need a box on the top where you can save your cards and follow pricing trends in cardmarket etc.
+--missing cardmarket pricing---
 
-second step:
-market data on saved hero cards
+## PLANNED TO BE DONE:
 
-script.js | search/form/events
-scryfall.js | scryfall API
-createCard.js | creating html card
-storage.js | LocalStorage
-hero.js | Saved cards + hero section
-market.js | cardmarket prices
+Need media query for animated card section as well as static section.
+
+Append prices and last logged in price movement over animated cards.
+Append prices and last logged in price movement on static cards (over or under?)
+
+We can use arrow_down.svg and arrow_up.svg, color up green down red beside price.
+
+STYLING TO STATIC CARDS:
+Squish them together so we can fit more on the same sheet without increasing our hero section size again and again.
+
+Hover effect that gives us the entire card with additional information.
+
+(Maximum box size)
+
+## DUNNO HOW BUT I WANT:
+
+When cards are clicked, pop up that gives us the option to mark ANY MTG TCG market for pricing.
