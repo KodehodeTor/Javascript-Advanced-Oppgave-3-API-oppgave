@@ -41,7 +41,7 @@ button.remove_btn {
 .content_wrapper {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 0.3s ease-out; /* Smooth transition speed */
+  transition: grid-template-rows 0.3s ease-out;
   overflow: hidden;
 }
 
@@ -66,7 +66,6 @@ button.remove_btn {
 }
 .arrow_toggle {
   background: transparent;
-  border: none;
   cursor: pointer;
   padding: 0;
   width: 24px;
@@ -83,14 +82,19 @@ button.remove_btn {
 
 /* Filter bar */
 
+#filterBar {
+  margin-left: 100px;
+  width: 770px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: -28px;
+}
+
 .filter_bar {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-
   opacity: 0;
   visibility: hidden;
-  max-width: 0;
   overflow: hidden;
   white-space: nowrap;
   transition:
@@ -105,11 +109,11 @@ button.remove_btn {
 }
 
 .filter_chip {
+  justify-content: center;
+  position: relative;
   padding: 4px 12px;
   font-size: 0.8rem;
-  border: 1px solid #ddd;
-  background: #f9f9f9;
-  cursor: pointer;
+  width: 100px;
 }
 
 .collapsible_container.is-active .arrow_toggle {
@@ -123,28 +127,24 @@ button.remove_btn {
   gap: 30px;
 }
 
-#filterBar {
-  width: 100%;
-}
-
-#filterBar.filter_bar {
-  margin-left: 100px;
-}
-
 button.filter_chip {
-  background: linear-gradient(#e2bd45, #9b7415);
-  padding: 9px 80px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: lighter;
   border-radius: 8px;
+  color: whitesmoke;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+button.filter_chip::after {
   cursor: pointer;
-  color: black;
-  font-weight: bolder;
-  border: none;
-}
-
-.filter_chip button {
-  width: 40px;
-}
-
-/* Filterby: */
-.filter_title {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background: #111;
+  border-radius: 8px;
+  z-index: -1;
 }
