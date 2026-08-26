@@ -107,10 +107,9 @@
       function toggleSection() {
         const container = document.querySelector(".collapsible_container");
         const content = document.getElementById("cardContent");
-        content.classList.toggle("open");
         const btn = document.querySelector(".arrow_toggle");
 
-        const isOpen = content.classlist.toggle("open");
+        const isOpen = content.classList.toggle("open");
         container.classList.toggle("is-active", isOpen);
 
         if (btn) btn.setAttribute("aria-expanded", isOpen);
