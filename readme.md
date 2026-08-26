@@ -2,8 +2,9 @@ NOTES
 
 //NOTES & FUTURE PLANS
 
-## DONE: ✅
+## DONE:
 
+Filter bar looks a bit meh, also mayhaps push it up so its in line with the min/max arrow?✅
 Card saver (localStorage) ✅
 Delete individual cards from the save_box ✅
 
@@ -37,6 +38,7 @@ When cards are clicked, pop up that gives us the option to mark ANY MTG TCG mark
 
 ## MAYHAPS?
 
-Filter bar looks a bit meh, also mayhaps push it up so its in line with the min/max arrow?
-
 TOO MANY BUTTONS WITH SAME STYLE ATM. ---
+Issue with static card remove button, it takes too much room.
+
+Need to fix the layout of the static card box before we start designing the removebutton.
