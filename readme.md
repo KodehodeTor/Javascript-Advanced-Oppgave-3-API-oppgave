@@ -1,6 +1,6 @@
 NOTES
 
-//NOTES & FUTURE PLANS
+NOTES & FUTURE PLANS
 
 ## DONE:
 
@@ -12,21 +12,32 @@ Delete individual cards from the save_box ✅
 When click cards, have save option, go to Cardmarket option and a select option (for mass additions of cards)
 --missing cardmarket option--
 
----
-
-Filter bar looks a bit meh - want more simplstic design, matching toggle static section arrow. Icons instead of text? - glossy/window effect marking the arrow so its easier to spot before expansion, then after expansion filterbar expands same size as hero section but the glossy/window effect expands ower the filter bunntons.
-
 Need a box on the top where you can save your cards and follow pricing trends in cardmarket etc.
 --missing cardmarket pricing--
 
+---
+
+Filter bar looks a bit meh - want more simplstic design, matching toggle static section arrow. Icons instead of text? - glossy/window effect marking the arrow so its easier to spot before expansion, then after expansion filterbar expands same size as hero section but the glossy/window effect expands ower the filter buttons.
+
 ## PLANNED TO BE DONE:
 
+TOO MANY BUTTONS WITH SAME STYLE ATM!
+Issue with static card remove button, it takes too much room.
+
+Need to fix the layout of the static card box before we start designing the removebutton.
+
+---
+
 Need media query for animated card section as well as static section.
+
+---
 
 Append prices and last logged in price movement over animated cards.
 Append prices and last logged in price movement on static cards (over or under?)
 
 We can use arrow_down.svg and arrow_up.svg, color up green down red beside price.
+
+---
 
 STYLING TO STATIC CARDS:
 Squish them together so we can fit more on the same sheet without increasing our hero section size again and again.
@@ -38,10 +49,3 @@ Hover effect that gives us the entire card with additional information.
 ## DUNNO HOW BUT I WANT:
 
 When cards are clicked, pop up that gives us the option to mark ANY MTG TCG market for pricing.
-
-## MAYHAPS?
-
-TOO MANY BUTTONS WITH SAME STYLE ATM. ---
-Issue with static card remove button, it takes too much room.
-
-Need to fix the layout of the static card box before we start designing the removebutton.
