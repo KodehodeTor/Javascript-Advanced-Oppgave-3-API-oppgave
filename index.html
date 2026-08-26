@@ -61,18 +61,29 @@
       <main id="saved_cards"></main>
 
       <!-- Static saved cards (Collapsible Section) -->
-      <div class="collapsible-container">
-        <!-- Clean, semantic toggle button -->
-        <button class="toggle-btn" onclick="toggleSection()">
-          Toggle Section
-        </button>
+      <div class="collapsible_container">
+        <div class="toggle_header_row"></div>
+
+        <!-- Button transformed -->
+        <button
+          class="toggle-btn arrow_toggle"
+          onclick="toggleSection()"
+          aria-label="Toggle Section"
+        ></button>
+
+        <div class="filter_bar" id="filterBar">
+          <span class="filter_title">Filter by:</span>
+          <button class="filter_chip">Name</button>
+          <button class="filter_chip">Price</button>
+          <button class="filter_chip">Recent</button>
+          <button class="filter_chip">Favorites</button>
+        </div>
 
         <!-- This wrapper controls the smooth height expansion -->
-        <div class="content-wrapper" id="myContent">
+        <div class="content_wrapper" id="myContent">
           <!-- Inner block ensures the content calculates height correctly -->
           <div class="inner-content">
             <div id="saved_cards_static"></div>
-            <p>This section smoothly minimizes and expands using CSS grid.</p>
           </div>
         </div>
       </div>

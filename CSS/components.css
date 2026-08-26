@@ -34,14 +34,14 @@ button:hover {
 }
 
 /* Toggle section */
-.content-wrapper {
+.content_wrapper {
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.3s ease-out; /* Smooth transition speed */
   overflow: hidden;
 }
 
-.content-wrapper.open {
+.content_wrapper.open {
   grid-template-rows: 1fr;
 }
 
@@ -52,4 +52,8 @@ button:hover {
 .toggle-btn {
   padding: 8px 16px;
   cursor: pointer;
+}
+
+.toggle_header_row {
+  display: flex;
 }
