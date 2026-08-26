@@ -34,3 +34,9 @@ Hover effect that gives us the entire card with additional information.
 ## DUNNO HOW BUT I WANT:
 
 When cards are clicked, pop up that gives us the option to mark ANY MTG TCG market for pricing.
+
+## MAYHAPS?
+
+Filter bar looks a bit meh, also mayhaps push it up so its in line with the min/max arrow?
+
+TOO MANY BUTTONS WITH SAME STYLE ATM. ---
