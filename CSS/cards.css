@@ -49,6 +49,7 @@
   overflow: hidden;
 }
 
+/* Hiding title and buttons for the animated cards. */
 #saved_cards p {
   opacity: 0;
 }
