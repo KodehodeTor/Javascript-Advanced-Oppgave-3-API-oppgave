@@ -49,7 +49,7 @@ export function displaySavedCards() {
   );
 
   //Start animation
-  if (savedCards.length >= 2) {
+  if (savedCards.length >= 6) {
     startCarousel(savedCards);
   }
 }
@@ -78,16 +78,15 @@ function startCarousel(savedCards) {
   });
 
   const cards = savedCardCont.querySelectorAll(".saved_card");
-
   const firstCard = cards[0];
   const secondSetFirstCard = cards[savedCards.length];
-
   const distance = secondSetFirstCard.offsetLeft - firstCard.offsetLeft;
 
   console.log("Cards:", cards.length);
   console.log("Distance:", distance);
 
-  savedCardCont.animate(
+  // Animation stored
+  const animation = savedCardCont.animate(
     [
       {
         transform: "translateX(0)",
@@ -102,9 +101,18 @@ function startCarousel(savedCards) {
       easing: "linear",
     },
   );
+
+  //Pause animation on hover
+  savedCardCont.addEventListener("mouseenter", () => {
+    animation.pause();
+  });
+
+  savedCardCont.addEventListener("mouseleave", () => {
+    animation.play();
+  });
 }
 
-//remove clicker
+//remove clicker for animated cards
 if (savedCardCont) {
   savedCardCont.addEventListener("click", (e) => {
     const removeBtn = e.target.closest(".remove_btn");
@@ -115,7 +123,7 @@ if (savedCardCont) {
     displaySavedCards();
   });
 }
-
+//remove clicker for static cards
 if (staticCardCont) {
   staticCardCont.addEventListener("click", (e) => {
     const removeBtn = e.target.closest(".remove_btn");
