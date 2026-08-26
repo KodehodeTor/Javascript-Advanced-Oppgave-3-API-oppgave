@@ -49,3 +49,11 @@ Hover effect that gives us the entire card with additional information.
 ## DUNNO HOW BUT I WANT:
 
 When cards are clicked, pop up that gives us the option to mark ANY MTG TCG market for pricing.
+
+## BUGS
+
+Carousel can be active at less than 6 cards if playing around with delting cards (note\*half math in JS instead of 1:6?)
+
+## MISSING
+
+There are no colorless option in the search bar filter.
