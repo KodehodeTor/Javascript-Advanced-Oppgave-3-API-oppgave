@@ -69,6 +69,7 @@
           class="toggle-btn arrow_toggle"
           onclick="toggleSection()"
           aria-label="Toggle Section"
+          aria-expanded="false"
         ></button>
 
         <div class="filter_bar" id="filterBar">
@@ -104,8 +105,15 @@
 
     <script>
       function toggleSection() {
+        const container = document.querySelector(".collapsible_container");
         const content = document.getElementById("cardContent");
         content.classList.toggle("open");
+        const btn = document.querySelector(".arrow_toggle");
+
+        const isOpen = content.classlist.toggle("open");
+        container.classList.toggle("is-active", isOpen);
+
+        if (btn) btn.setAttribute("aria-expanded", isOpen);
       }
     </script>
   </body>

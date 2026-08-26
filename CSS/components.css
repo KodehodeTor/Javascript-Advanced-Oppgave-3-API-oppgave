@@ -60,7 +60,7 @@ button:hover {
   gap: 12px;
   margin-bottom: 8px;
 }
-.arrow-toggle {
+.arrow_toggle {
   background: transparent;
   border: none;
   cursor: pointer;
