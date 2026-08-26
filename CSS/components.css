@@ -33,6 +33,10 @@ button:hover {
   justify-content: center;
 }
 
+button.remove_btn {
+  margin: auto;
+}
+
 /* Toggle section */
 .content_wrapper {
   display: grid;
@@ -77,6 +81,8 @@ button:hover {
   mask: url("../icons/arrow_down.svg") no-repeat center / contain;
 }
 
+/* Filter bar */
+
 .filter_bar {
   display: inline-flex;
   align-items: center;
@@ -113,5 +119,32 @@ button:hover {
 .collapsible_container.is-active .filter_bar {
   opacity: 1;
   visibility: visible;
-  max-width: 400px;
+  max-width: 1200px;
+  gap: 30px;
+}
+
+#filterBar {
+  width: 100%;
+}
+
+#filterBar.filter_bar {
+  margin-left: 100px;
+}
+
+button.filter_chip {
+  background: linear-gradient(#e2bd45, #9b7415);
+  padding: 9px 80px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: black;
+  font-weight: bolder;
+  border: none;
+}
+
+.filter_chip button {
+  width: 40px;
+}
+
+/* Filterby: */
+.filter_title {
 }
