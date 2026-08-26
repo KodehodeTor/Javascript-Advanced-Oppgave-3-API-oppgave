@@ -69,8 +69,8 @@ button:hover {
   height: 24px;
   display: inline-block;
 
-  background-color: currentColor;
-  transform: transform 0.3 ease;
+  background-color: red;
+  transition: transform 0.3s ease;
 
   -webkit-mask: url("../icons/arrow_down.svg") no-repeat center / contain;
 
@@ -106,11 +106,11 @@ button:hover {
   cursor: pointer;
 }
 
-.collapsible_container.is.active .arrow-toggle {
+.collapsible_container.is-active .arrow_toggle {
   transform: rotate(180deg);
 }
 
-.collapsible_container.is-active .filter-bar {
+.collapsible_container.is-active .filter_bar {
   opacity: 1;
   visibility: visible;
   max-width: 400px;
