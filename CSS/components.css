@@ -56,4 +56,62 @@ button:hover {
 
 .toggle_header_row {
   display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.arrow-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+
+  background-color: currentColor;
+  transform: transform 0.3 ease;
+
+  -webkit-mask: url("../icons/arrow_down.svg") no-repeat center / contain;
+
+  mask: url("../icons/arrow_down.svg") no-repeat center / contain;
+}
+
+.filter_bar {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  opacity: 0;
+  visibility: hidden;
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition:
+    opacity 0.2s ease,
+    max width 0.3s ease,
+    visiblity 0.3s;
+}
+
+.filter_title {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.filter_chip {
+  padding: 4px 12px;
+  font-size: 0.8rem;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  cursor: pointer;
+}
+
+.collapsible_container.is.active .arrow-toggle {
+  transform: rotate(180deg);
+}
+
+.collapsible_container.is-active .filter-bar {
+  opacity: 1;
+  visibility: visible;
+  max-width: 400px;
 }
