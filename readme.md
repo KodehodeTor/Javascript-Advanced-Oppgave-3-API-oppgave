@@ -17,7 +17,7 @@ Need a box on the top where you can save your cards and follow pricing trends in
 
 ---
 
-Filter bar looks a bit meh - want more simplstic design, matching toggle static section arrow. Icons instead of text? - glossy/window effect marking the arrow so its easier to spot before expansion, then after expansion filterbar expands same size as hero section but the glossy/window effect expands ower the filter buttons.
+Filter bar looks a bit meh - want a simplstic design, matching toggle static section arrow. Icons instead of text? - glossy/window effect marking the arrow so its easier to spot before expansion, then after expansion filterbar expands same size as hero section but the glossy/window effect expands ower the filter buttons.
 
 ## PLANNED TO BE DONE:
 
@@ -52,7 +52,9 @@ When cards are clicked, pop up that gives us the option to mark ANY MTG TCG mark
 
 ## BUGS
 
-Carousel can be active at less than 6 cards if playing around with delting cards (note\*half math in JS instead of 1:6?)
+With the way we are appending card names and deleting double face cards name is not optimal. There has been some cards which a part of the name is deleted even when the card is not double sided.
+
+Like "Sheoldred, the apocoplyse" becoming "Sheoldred, the"....
 
 ## MISSING
 

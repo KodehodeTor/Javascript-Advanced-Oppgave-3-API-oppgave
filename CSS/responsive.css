@@ -35,6 +35,8 @@
     z-index: 1;
     top: 530px;
   }
+  #saved_cards {
+  }
 }
 
 @media (max-width: 600px) {
@@ -72,5 +74,7 @@
     position: fixed;
     z-index: 1;
     top: 530px;
+  }
+  #saved_cards {
   }
 }
