@@ -37,14 +37,13 @@
     top: 530px;
   }
   #saved_cards_viewport {
-    width: 80%;
+    width: 60%;
   }
   #saved_cards_static {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
-    width: 70%;
+
+    width: 60%;
     margin-top: 20px;
   }
 }
@@ -88,14 +87,14 @@
   }
 
   #saved_cards_viewport {
-    width: 90%;
+    width: 60%;
   }
   #saved_cards_static {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
-    width: 80%;
+    gap: 10px;
+    width: 60%;
     margin-top: 20px;
   }
 }
