@@ -1,34 +1,34 @@
 /* BUTTON */
 
 button {
-  margin-right: -82px;
+  margin-right: -5.125rem;
   position: relative;
   z-index: 1;
-  padding: 9px 80px;
-  border-radius: 8px;
+  padding: 0.563rem 5rem;
+  border-radius: 0.5rem;
   cursor: pointer;
   color: black;
   background: linear-gradient(#e2bd45, #9b7415);
   font-weight: bolder;
-  font-size: 15px;
-  width: 240px;
+  font-size: 0.938rem;
+  width: 15rem;
 }
 
 #load_btn {
-  margin-right: 5px;
-  margin-top: 15px;
+  margin-right: 0.313rem;
+  margin-top: 0.938rem;
 }
 
 button:hover {
-  box-shadow: 0 0 15px rgba(245, 199, 66, 0.5);
+  box-shadow: 0 0 0.938rem rgba(245, 199, 66, 0.5);
 }
 
 /* Button for cards */
 .remove_btn {
   display: flex;
-  font-size: 12px;
-  height: 30px;
-  width: 50px;
+  font-size: 0.75rem;
+  height: 1.875rem;
+  width: 3.125rem;
   text-align: center;
   justify-content: center;
 }
@@ -54,23 +54,23 @@ button.remove_btn {
 }
 
 .toggle-btn {
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
   cursor: pointer;
-  margin-right: 16px;
+  margin-right: 1rem;
 }
 
 .toggle_header_row {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 8px;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 .arrow_toggle {
   background: transparent;
   cursor: pointer;
   padding: 0;
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
   display: inline-block;
 
   background-color: #ffcc00;
@@ -84,11 +84,10 @@ button.remove_btn {
 /* Filter bar */
 
 #filterBar {
-  margin-left: 100px;
-  width: 770px;
+  margin-left: 6.25rem;
+  width: 48.125rem;
   display: flex;
   justify-content: space-evenly;
-  /* margin-top: -28px; */
 }
 
 .filter_bar {
@@ -112,9 +111,9 @@ button.remove_btn {
 .filter_chip {
   justify-content: center;
   position: relative;
-  padding: 4px 12px;
+  padding: 0.25rem 0.75rem;
   font-size: 0.8rem;
-  width: 100px;
+  width: 6.25rem;
 }
 
 .collapsible_container {
@@ -128,28 +127,28 @@ button.remove_btn {
 .collapsible_container.is-active .filter_bar {
   opacity: 1;
   visibility: visible;
-  max-width: 1200px;
-  gap: 30px;
+  max-width: 75rem;
+  gap: 1.875rem;
 }
 
 button.filter_chip {
   font-family: "Times New Roman", Times, serif;
   font-weight: lighter;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   color: whitesmoke;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 0.938rem;
 }
 
 button.filter_chip::after {
   cursor: pointer;
   content: "";
   position: absolute;
-  inset: -1px;
+  inset: 0.063rem;
   background: #111;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   z-index: -1;
 }

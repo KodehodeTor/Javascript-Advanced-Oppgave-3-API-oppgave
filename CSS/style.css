@@ -36,23 +36,23 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 15px;
+  font-size: 0.938rem;
   font-weight: bolder;
-  margin-bottom: 25px;
+  margin-bottom: 1.563rem;
   z-index: 1;
 }
 
 span {
-  padding: 10px;
+  padding: 0.625rem;
 }
 
 /* TITLE */
 #title {
-  margin-top: 25px;
+  margin-top: 1.563rem;
   font-family: "Beleren", "Matrix", "Georgia", serif;
   font-size: 4rem;
   font-weight: 900;
-  letter-spacing: 2px;
+  letter-spacing: 0.125rem;
   text-transform: uppercase;
 
   /* Gradient text fill */
@@ -61,8 +61,10 @@ span {
   -webkit-text-fill-color: transparent;
 
   /* Shadow for depth and pop */
-  filter: drop-shadow(3px 3px 0px #000) drop-shadow(-1px -1px 0px #000)
-    drop-shadow(1px -1px 0px #000) drop-shadow(-1px 1px 0px #000);
+  filter: drop-shadow(0.188rem 0.188rem 0 #000)
+    drop-shadow(-0.063rem -0.063rem 0rem #000)
+    drop-shadow(0.063rem -0.063rem 0rem #000)
+    drop-shadow(-0.063rem 0.063rem 0rem #000);
 }
 
 .saved_card_container {

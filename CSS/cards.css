@@ -1,13 +1,13 @@
 /* CARDS */
 
 #cards {
-  margin-top: 100px;
+  margin-top: 6.25rem;
   display: grid;
-  grid-template-columns: repeat(4, 200px);
-  gap: 20px;
-  padding: 20px;
+  grid-template-columns: repeat(4, 12.5rem);
+  gap: 1.25rem;
+  padding: 1.25rem;
   box-sizing: border-box;
-  margin-bottom: 300px;
+  margin-bottom: 18.75rem;
 }
 
 .card {
@@ -16,33 +16,32 @@
 }
 
 .card p {
-  max-height: 16px;
+  max-height: 1rem;
   overflow: hidden;
 }
 
 .card img {
-  width: 200px;
-  height: 280px;
+  width: 12.5rem;
+  height: 17.5rem;
   aspect-ratio: 5/7;
   border-radius: 4.75% / 3.5%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
   display: block;
-  filter: drop-shadow(0px 0px 30px rgba(255, 255, 255, 0.2));
+  filter: drop-shadow(0rem 0rem 1.875rem rgba(255, 255, 255, 0.2));
 }
 
 /* HERO SECTION */
 
 #hero {
-  width: 1200px;
+  width: 75rem;
   overflow: hidden;
-  border-radius: 25px;
-  /* border: 1px solid #d4af37; */
-  margin-bottom: 25px;
+  border-radius: 1.563rem;
+  margin-bottom: 1.563rem;
 }
 
 /* Animated cards */
 #saved_cards_viewport {
-  width: min(90%, 1200px);
+  width: min(90%, 75rem);
   margin: 0 auto;
   overflow: hidden;
 }
@@ -50,7 +49,7 @@
 #saved_cards {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 0.938rem;
   width: max-content;
   overflow: hidden;
 }
@@ -70,9 +69,9 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 1.25rem;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 1.25rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -90,13 +89,13 @@
 }
 
 .saved_card img {
-  width: 200px;
-  height: 280px;
+  width: 12.5rem;
+  height: 17.5rem;
   aspect-ratio: 5/7;
   border-radius: 4.75% / 3.5%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
   display: block;
-  filter: drop-shadow(0px 0px 30px rgba(255, 255, 255, 0.2));
+  filter: drop-shadow(0rem 0rem 1.875rem rgba(255, 255, 255, 0.2));
 }
 
 /* #hero_card {

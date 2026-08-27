@@ -10,13 +10,13 @@
     transform: translatex(1.55rem);
   }
   #cards {
-    margin-top: 100px;
+    margin-top: 6.25rem;
     display: grid;
-    grid-template-columns: repeat(3, 200px);
-    gap: 20px;
-    padding: 20px;
+    grid-template-columns: repeat(3, 12.5rem);
+    gap: 1.25rem;
+    padding: 1.25rem;
     box-sizing: border-box;
-    margin-bottom: 300px;
+    margin-bottom: 18.75rem;
   }
   button#submit_btn {
     display: flex;
@@ -25,16 +25,16 @@
     width: 200%;
   }
   .spinner {
-    width: 50px;
-    height: 50px;
-    border: 5px solid #f3f3f3;
-    border-top: 5px solid #dbd030;
+    width: 3.125rem;
+    height: 3.125rem;
+    border: 0.313rem solid #f3f3f3;
+    border-top: 0.313rem solid #dbd030;
     border-radius: 50%;
     animation: spinnerSpin 1s linear infinite;
-    margin: 20px auto;
+    margin: 1.25rem auto;
     position: fixed;
     z-index: 1;
-    top: 530px;
+    top: 33.125rem;
   }
   #saved_cards_viewport {
     width: 60%;
@@ -44,7 +44,7 @@
     flex-wrap: wrap;
 
     width: 60%;
-    margin-top: 20px;
+    margin-top: 1.25rem;
   }
 }
 
@@ -61,11 +61,11 @@
   }
   #cards {
     display: grid;
-    grid-template-columns: repeat(2, 200px);
-    gap: 20px;
-    padding: 20px;
+    grid-template-columns: repeat(2, 12.5rem);
+    gap: 1.25rem;
+    padding: 1.25rem;
     box-sizing: border-box;
-    margin-bottom: 300px;
+    margin-bottom: 18.75rem;
   }
   button#submit_btn {
     display: flex;
@@ -74,16 +74,16 @@
     width: 200%;
   }
   .spinner {
-    width: 50px;
-    height: 50px;
-    border: 5px solid #f3f3f3;
-    border-top: 5px solid #dbd030;
+    width: 3.125rem;
+    height: 3.125rem;
+    border: 0.313rem solid #f3f3f3;
+    border-top: 0.313rem solid #dbd030;
     border-radius: 50%;
     animation: spinnerSpin 1s linear infinite;
-    margin: 20px auto;
+    margin: 1.25rem auto;
     position: fixed;
     z-index: 1;
-    top: 530px;
+    top: 33.125rem;
   }
 
   #saved_cards_viewport {
@@ -93,8 +93,8 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 0.625rem;
     width: 60%;
-    margin-top: 20px;
+    margin-top: 1.25rem;
   }
 }
