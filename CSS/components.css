@@ -87,7 +87,7 @@ button.remove_btn {
   width: 770px;
   display: flex;
   justify-content: space-evenly;
-  margin-top: -28px;
+  /* margin-top: -28px; */
 }
 
 .filter_bar {
@@ -114,6 +114,10 @@ button.remove_btn {
   padding: 4px 12px;
   font-size: 0.8rem;
   width: 100px;
+}
+
+.collapsible_container {
+  text-align: center;
 }
 
 .collapsible_container.is-active .arrow_toggle {

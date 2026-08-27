@@ -41,6 +41,12 @@
 }
 
 /* Animated cards */
+#saved_cards_viewport {
+  width: min(90%, 1200px);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
 #saved_cards {
   display: flex;
   justify-content: center;

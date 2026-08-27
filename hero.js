@@ -80,27 +80,55 @@ function startCarousel(savedCards) {
   const cards = savedCardCont.querySelectorAll(".saved_card");
   const firstCard = cards[0];
   const secondSetFirstCard = cards[savedCards.length];
-  const distance = secondSetFirstCard.offsetLeft - firstCard.offsetLeft;
 
   console.log("Cards:", cards.length);
-  console.log("Distance:", distance);
 
-  // Animation stored
-  const animation = savedCardCont.animate(
-    [
+  let animation = null;
+
+  function carouselMQ() {
+    if (animation) {
+      animation.cancel();
+    }
+    const distance = secondSetFirstCard.offsetLeft - firstCard.offsetLeft;
+    // console.log("Calculating distance:", distance);
+
+    // Animation stored
+    animation = savedCardCont.animate(
+      [
+        {
+          transform: "translateX(0)",
+        },
+        {
+          transform: `translateX(-${distance}px)`,
+        },
+      ],
       {
-        transform: "translateX(0)",
+        duration: 50000,
+        iterations: Infinity,
+        easing: "linear",
       },
-      {
-        transform: `translateX(-${distance}px)`,
-      },
-    ],
-    {
-      duration: 50000,
-      iterations: Infinity,
-      easing: "linear",
-    },
-  );
+    );
+  }
+
+  // NOTE: Unsure which to use.
+  // // Screen changes trigger recalculations.
+  // const mediaQueries = [
+  //   window.matchMedia("(min-width: 48rem)"), //tablet 768px
+  //   window.matchMedia("(min-width: 64rem)"), //desktop 1024px
+  // ];
+
+  // mediaQueries.forEach((mq) => {
+  //   mq.addEventListener("change", carouselMQ);
+  // });
+
+  //Handles resizing, small delay to avoid lag.
+  let resizeTimeout;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(carouselMQ, 150);
+  });
+
+  carouselMQ();
 
   //Pause animation on hover
   savedCardCont.addEventListener("mouseover", (c) => {

@@ -1,4 +1,5 @@
-@media (max-width: 1000px) {
+/* Desktop */
+@media (max-width: 64rem) {
   form#search {
     grid-template-columns: 1fr 1fr;
     min-width: 0;
@@ -35,11 +36,21 @@
     z-index: 1;
     top: 530px;
   }
-  #saved_cards {
+  #saved_cards_viewport {
+    width: 80%;
+  }
+  #saved_cards_static {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 70%;
+    margin-top: 20px;
   }
 }
 
-@media (max-width: 600px) {
+/* Tablet */
+@media (max-width: 48rem) {
   form#search {
     grid-template-columns: 1fr 1fr;
     min-width: 0;
@@ -75,6 +86,16 @@
     z-index: 1;
     top: 530px;
   }
-  #saved_cards {
+
+  #saved_cards_viewport {
+    width: 90%;
+  }
+  #saved_cards_static {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 80%;
+    margin-top: 20px;
   }
 }
