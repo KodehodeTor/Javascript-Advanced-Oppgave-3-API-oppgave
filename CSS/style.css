@@ -24,9 +24,9 @@ body {
     #000000 100%
   );
   background-color: #000000;
-  background-size: 100% 100vh;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: scroll;
+  background-attachment: fixed;
   color: whitesmoke;
   min-height: 100vh;
 }

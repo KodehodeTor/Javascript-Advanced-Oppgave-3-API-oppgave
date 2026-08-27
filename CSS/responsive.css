@@ -17,12 +17,12 @@
     padding: 1.25rem;
     box-sizing: border-box;
     margin-bottom: 18.75rem;
+    justify-content: center;
   }
   button#submit_btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200%;
+    grid-column: span 2;
+    width: 100%;
+    padding: 0.75rem;
   }
   .spinner {
     width: 3.125rem;
@@ -36,23 +36,31 @@
     z-index: 1;
     top: 33.125rem;
   }
-  #saved_cards_viewport {
-    width: 60%;
-  }
-  #saved_cards_static {
-    display: flex;
-    flex-wrap: wrap;
 
-    width: 60%;
-    margin-top: 1.25rem;
+  #hero {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
+}
+#saved_cards_viewport {
+  box-sizing: border-box;
+  width: 100%;
+}
+#saved_cards_static {
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 100%;
+  margin-top: 1.25rem;
+  box-sizing: border-box;
 }
 
 /* Tablet */
 @media (max-width: 48rem) {
   form#search {
     grid-template-columns: 1fr 1fr;
-    min-width: 0;
+    gap: 1rem;
     width: 100%;
   }
   select#commander {
@@ -66,6 +74,7 @@
     padding: 1.25rem;
     box-sizing: border-box;
     margin-bottom: 18.75rem;
+    justify-content: center;
   }
   button#submit_btn {
     display: flex;
@@ -86,15 +95,89 @@
     top: 33.125rem;
   }
 
+  #hero {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  #filterBar {
+    width: 100%;
+    margin-left: -7rem;
+    box-sizing: border-box;
+  }
+
   #saved_cards_viewport {
-    width: 60%;
+    width: 100%;
+    box-sizing: border-box;
   }
   #saved_cards_static {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 0.625rem;
-    width: 60%;
+    width: 100%;
     margin-top: 1.25rem;
+    box-sizing: border-box;
+  }
+}
+
+/* Mobile */
+@media (max-width: 30rem) {
+  form#search {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  #hero {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  #filterBar {
+    width: 100%;
+    margin-left: -4rem;
+  }
+
+  select#commander {
+    margin-left: 0.1rem;
+    transform: none;
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  #cards {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 5rem;
+  }
+
+  button#submit_btn {
+    width: 100%;
+  }
+
+  #full_search {
+    width: 90%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  #saved_cards_static {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+  }
+
+  #saved_cards_viewport,
+  #saved_cards_static {
+    width: 100%;
+    box-sizing: border-box;
   }
 }

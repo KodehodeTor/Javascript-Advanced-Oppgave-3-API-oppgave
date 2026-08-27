@@ -84,10 +84,10 @@ button.remove_btn {
 /* Filter bar */
 
 #filterBar {
-  margin-left: 6.25rem;
-  width: 48.125rem;
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
+  box-sizing: border-box;
 }
 
 .filter_bar {
@@ -151,4 +151,9 @@ button.filter_chip::after {
   background: #111;
   border-radius: 0.5rem;
   z-index: -1;
+}
+
+button#submit_btn {
+  grid-column: span 2;
+  width: 83%;
 }
