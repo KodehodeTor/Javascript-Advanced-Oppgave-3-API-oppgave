@@ -110,17 +110,6 @@ function startCarousel(savedCards) {
     );
   }
 
-  // NOTE: Unsure which to use.
-  // // Screen changes trigger recalculations.
-  // const mediaQueries = [
-  //   window.matchMedia("(min-width: 48rem)"), //tablet 768px
-  //   window.matchMedia("(min-width: 64rem)"), //desktop 1024px
-  // ];
-
-  // mediaQueries.forEach((mq) => {
-  //   mq.addEventListener("change", carouselMQ);
-  // });
-
   //Handles resizing, small delay to avoid lag.
   let resizeTimeout;
   window.addEventListener("resize", () => {
