@@ -84,19 +84,20 @@
   cursor: pointer;
 
   .saved_card:hover {
-    transform: scale(1.2) !important;
+    transform: scale(1.2);
     z-index: 99;
   }
 }
 
 .saved_card img {
-  width: 12.5rem;
-  height: 17.5rem;
+  width: 100%;
+  max-width: 12.5rem;
+  height: auto;
   aspect-ratio: 5/7;
   border-radius: 4.75% / 3.5%;
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
   display: block;
-  filter: drop-shadow(0rem 0rem 1.875rem rgba(255, 255, 255, 0.2));
+  filter: drop-shadow(0rem 0rem 1.875rem) rgba(255, 255, 255, 0.2);
 }
 
 /* #hero_card {
