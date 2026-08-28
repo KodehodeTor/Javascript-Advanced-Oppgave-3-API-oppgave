@@ -145,7 +145,7 @@
   #filterBar {
     overflow: visible;
     justify-content: center;
-    gap: 0.813rem;
+    gap: 0.001rem;
     margin: 0.5rem 0;
   }
 
