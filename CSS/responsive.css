@@ -61,7 +61,7 @@
   form#search {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-    width: 100%;
+    width: 80%;
   }
   select#commander {
     width: 100%;
@@ -80,7 +80,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200%;
+    width: 100%;
   }
   .spinner {
     width: 3.125rem;
@@ -93,6 +93,10 @@
     position: fixed;
     z-index: 1;
     top: 33.125rem;
+  }
+
+  #title {
+    width: 80%;
   }
 
   #hero {
@@ -135,9 +139,19 @@
     box-sizing: border-box;
   }
 
+  .filter_bar {
+  }
+
   #filterBar {
-    width: 100%;
-    margin-left: -4rem;
+    overflow: visible;
+    justify-content: center;
+    gap: 0.813rem;
+    margin: 0.5rem 0;
+  }
+
+  .filter_chip {
+    flex: 0 0 auto;
+    min-width: 5.5rem;
   }
 
   select#commander {
@@ -151,7 +165,7 @@
   }
 
   #cards {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     justify-content: center;
     width: 100%;
     margin-bottom: 5rem;
@@ -162,22 +176,35 @@
   }
 
   #full_search {
-    width: 90%;
+    width: 100%;
     max-width: 100%;
     box-sizing: border-box;
     padding: 1rem;
     margin: 1rem auto;
   }
 
+  #saved_cards {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    margin: auto;
+  }
+
   #saved_cards_static {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     margin: auto;
+    place-items: center;
   }
 
   #saved_cards_viewport,
   #saved_cards_static {
     width: 100%;
     box-sizing: border-box;
+  }
+
+  select,
+  input {
+    width: 100%;
   }
 }

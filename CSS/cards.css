@@ -59,7 +59,9 @@
 }
 
 #saved_cards .remove_btn {
+  pointer-events: none;
   opacity: 0;
+  cursor: not-allowed;
 }
 
 /* Static cards */
