@@ -68,9 +68,10 @@
   width: 100%;
 }
 #saved_cards_static {
-  display: flex;
-  flex-wrap: wrap;
-
+  display: grid;
+  grid-template-columns: repeat(4, 12.5rem);
+  justify-content: center;
+  gap: 0.625rem;
   width: 100%;
   margin-top: 1.25rem;
   box-sizing: border-box;
@@ -116,7 +117,7 @@
   }
 
   #title {
-    width: 80%;
+    width: 100%;
   }
 
   #hero {
@@ -137,9 +138,9 @@
     box-sizing: border-box;
   }
   #saved_cards_static {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 12.5rem);
     justify-content: center;
-    flex-wrap: wrap;
     gap: 0.625rem;
     width: 100%;
     margin-top: 1.25rem;
@@ -205,28 +206,24 @@
   }
 
   .inner-content {
+    display: Grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
+    justify-items: center;
     width: 100%;
     /* margin-bottom: 5rem; */
   }
 
   .saved_card {
-    width: calc(50% - 0.4065rem);
-  }
-
-  #saved_cards {
-    /* display: flex;
-    box-sizing: border-box;
-    justify-content: center;
-    margin: auto; */
+    width: calc(90% - 0.4065rem);
   }
 
   #saved_cards_static {
+    display: Grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
-    width: 100%;
+    width: calc(90% - 0.4065rem);
     margin-bottom: 5rem;
+    gap: 0.001rem;
   }
 
   #saved_cards_viewport,

@@ -15,7 +15,10 @@
 }
 
 .card p {
-  max-height: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
   overflow: hidden;
 }
 
@@ -32,10 +35,12 @@
 /* HERO SECTION */
 
 #hero {
-  width: 75rem;
+  width: 100%;
+  max-width: 100%;
   overflow: hidden;
   border-radius: 1.563rem;
   margin-bottom: 1.563rem;
+  box-sizing: border-box;
 }
 
 /* Animated cards */
@@ -53,7 +58,6 @@
   overflow: hidden;
 }
 
-/* Hiding title and buttons for the animated cards. */
 #saved_cards p {
   opacity: 0;
 }
@@ -66,15 +70,21 @@
 
 /* Static cards */
 
+.saved_card p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
 #saved_cards_static {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 12.5rem);
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.25rem;
-  width: 100%;
+  gap: 0.625rem;
   margin-top: 1.25rem;
-  margin-left: auto;
-  margin-right: auto;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
 .saved_card {
@@ -82,11 +92,11 @@
   flex-direction: column;
   transition: transform 0.3s ease;
   cursor: pointer;
+}
 
-  .saved_card:hover {
-    transform: scale(1.2);
-    z-index: 99;
-  }
+.saved_card:hover {
+  transform: scale(1.2);
+  z-index: 99;
 }
 
 .saved_card img {
@@ -97,8 +107,5 @@
   border-radius: 4.75% / 3.5%;
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
   display: block;
-  filter: drop-shadow(0rem 0rem 1.875rem) rgba(255, 255, 255, 0.2);
+  filter: drop-shadow(0rem 0rem 1.875rem rgba(255, 255, 255, 0.2));
 }
-
-/* #hero_card {
-} */
