@@ -26,8 +26,8 @@ button:hover {
 .remove_btn {
   display: flex;
   font-size: 0.75rem;
-  height: 1.875rem;
-  width: 3.125rem;
+  height: auto;
+  width: 80%;
   text-align: center;
   justify-content: center;
 }
@@ -147,7 +147,7 @@ button.remove_btn {
 .collapsible_container.is-active .filter_bar {
   opacity: 1;
   visibility: visible;
-  max-width: 75rem;
+  max-width: 100%;
   gap: 1.875rem;
 }
 

@@ -12,6 +12,7 @@
 .card {
   color: whitesmoke;
   cursor: pointer;
+  min-width: 0;
 }
 
 .card p {
@@ -58,6 +59,11 @@
   overflow: hidden;
 }
 
+#saved_card:hover {
+  transform: scale(1.2);
+  z-index: 99;
+}
+
 #saved_cards p {
   opacity: 0;
 }
@@ -92,11 +98,6 @@
   flex-direction: column;
   transition: transform 0.3s ease;
   cursor: pointer;
-}
-
-.saved_card:hover {
-  transform: scale(1.2);
-  z-index: 99;
 }
 
 .saved_card img {
