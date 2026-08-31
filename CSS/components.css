@@ -53,9 +53,9 @@ button.remove_btn {
 }
 
 .toggle-btn {
+  align-items: center;
   padding: 0.5rem 1rem;
   cursor: pointer;
-  margin-left: 1rem;
 }
 
 .toggle_header_row {
@@ -82,9 +82,28 @@ button.remove_btn {
 
 /* Filter bar */
 
+.filter_bar {
+  overflow: visible;
+  justify-content: center;
+  gap: 0.001rem;
+  /* margin: 0.5rem 0; */
+}
+
+#filterBar {
+  overflow: visible;
+  justify-content: center;
+  gap: 0.001rem;
+  /* margin: 0.5rem 0; */
+}
+
+.filter_chip {
+  justify-content: center;
+  flex: 0 0 auto;
+  min-width: 5.5rem;
+}
+
 #filterBar {
   width: 100%;
-  display: flex;
   justify-content: center;
   gap: 0.01rem;
   box-sizing: border-box;
@@ -116,7 +135,9 @@ button.remove_btn {
 }
 
 .collapsible_container {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .collapsible_container.is-active .arrow_toggle {
