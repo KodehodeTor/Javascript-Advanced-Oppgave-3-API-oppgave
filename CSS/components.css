@@ -1,7 +1,4 @@
 /* BUTTON */
-#submit_btn {
-  margin-right: -5.125rem;
-}
 
 button {
   position: relative;
@@ -58,7 +55,7 @@ button.remove_btn {
 .toggle-btn {
   padding: 0.5rem 1rem;
   cursor: pointer;
-  margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 .toggle_header_row {
@@ -88,7 +85,8 @@ button.remove_btn {
 #filterBar {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 0.01rem;
   box-sizing: border-box;
 }
 
@@ -106,8 +104,7 @@ button.remove_btn {
 }
 
 .filter_title {
-  font-size: 0.9rem;
-  color: #666;
+  appearance: none;
 }
 
 .filter_chip {
