@@ -35,7 +35,7 @@ export function createCard(cardInfo) {
   const price = cardInfo.prices?.eur || null;
 
   const priceP = document.createElement("p");
-  priceP.className = "card_price";
+  priceP.className = price ? "card_price has" : "card_price hasnt";
   priceP.textContent = price ? `€${price}` : "Price unavailable";
 
   //Store data
