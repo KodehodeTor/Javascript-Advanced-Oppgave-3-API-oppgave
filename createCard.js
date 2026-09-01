@@ -19,7 +19,7 @@ export function createCard(cardInfo) {
   //centers the title after double face name is removed
   p.style.textAlign = "center";
   //Creates the title
-  let textP = document.createTextNode(cardName);
+  const textP = document.createTextNode(cardName);
   //Creates img card
   const img = document.createElement("img");
   let imageUrl = "";
@@ -34,6 +34,10 @@ export function createCard(cardInfo) {
 
   const price = cardInfo.prices?.eur || null;
 
+  const priceP = document.createElement("p");
+  priceP.className = "card_price";
+  priceP.textContent = price ? `€${price}` : "Price unavailable";
+
   //Store data
   div.dataset.name = cardName;
   div.dataset.image = imageUrl;
@@ -43,6 +47,7 @@ export function createCard(cardInfo) {
   p.append(textP);
   div.appendChild(p);
   div.appendChild(img);
+  div.appendChild(priceP);
   cardCont.appendChild(div);
 
   //Click to save
@@ -52,7 +57,7 @@ export function createCard(cardInfo) {
       image: div.dataset.image,
       price: div.dataset.price || null,
     };
-    displaySavedCards(card);
     savedCard(card);
+    displaySavedCards(card);
   });
 }
