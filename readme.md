@@ -4,19 +4,18 @@ NOTES & FUTURE PLANS
 
 ## DONE:
 
+Need a box on the top where you can save your cards✅
+Prices ✅
 Card saver (localStorage) ✅
 Delete individual cards from the save_box ✅
 
 ## HALF DONE:
 
-When click cards, have save option, go to Cardmarket option and a select option (for mass additions of cards)
---missing cardmarket option--
-
-Need a box on the top where you can save your cards and follow pricing trends in cardmarket etc.
---missing cardmarket pricing--
+Follow pricing trends in cardmarket.
 
 ---
 
+CONSIDERING:
 Filter bar looks a bit meh - want a simplstic design, matching toggle static section arrow. Icons instead of text? - glossy/window effect marking the arrow so its easier to spot before expansion, then after expansion filterbar expands same size as hero section but the glossy/window effect expands ower the filter buttons.
 
 ## PLANNED TO BE DONE:

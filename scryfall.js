@@ -50,9 +50,27 @@ export async function getData(url, isNextPage = false) {
       }) //Catches errors
       .catch((err) => console.log("Fetch Error: ", err))
       // Stops the loading spinner from spinning after loading
-      .finally((e) => {
+      .finally(() => {
         const spinner = document.querySelector("#loading_spinner");
         if (spinner) spinner.style.display = "none";
       });
+  } else {
+    // Warning for blocked/invalid URL.
+    console.warn("Blocked non-scryfall URL:", url);
+  }
+}
+
+//Fetches current price for specific cards, used when refreshing  saved card prices.
+export async function fetchCardPrice(cardName) {
+  try {
+    const rest = await fetch(
+      `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}`,
+    );
+    if (!res.ok) return null;
+    const data = await res.json();
+    return data.prices?.eur || null;
+  } catch (err) {
+    console.log("Price fetch error for", cardName, err);
+    return null;
   }
 }
