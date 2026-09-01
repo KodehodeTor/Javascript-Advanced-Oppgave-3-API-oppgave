@@ -63,7 +63,7 @@ function createSavedCard(card, container) {
   element.innerHTML = `
      <p>${card.name}</p>
         <img src="${card.image}" alt="${card.name}">
-       
+       <p class="card_price">${card.price ? `€${card.price}` : "Price unavailable"}</p>
         <button data-name="${card.name}" class="remove_btn">Remove</button>
         `;
   container.appendChild(element);
