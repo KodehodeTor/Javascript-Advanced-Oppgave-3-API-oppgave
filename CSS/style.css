@@ -38,7 +38,7 @@ p {
   align-items: center;
   font-size: 0.838rem;
   font-weight: bolder;
-  margin-bottom: 1.563rem;
+  margin-bottom: 0.563rem;
   z-index: 1;
 }
 
@@ -84,9 +84,13 @@ html {
 /* Prices */
 
 .card_price.has {
+  margin-top: 0.3rem;
   color: green;
+  font-size: 1rem;
 }
 
 .card_price.hasnt {
+  margin-top: 0.3rem;
   color: red;
+  font-size: 1rem;
 }
