@@ -80,8 +80,8 @@ function createSavedCard(card, container) {
       const isIncrease = percentChange > 0;
 
       trend = isIncrease
-        ? `<span class="price-up">▲ ${percentChange.toFixed(1)}%</span>`
-        : `<span class="price-down">▼ ${Math.abs(percentChange).toFixed(1)}%</span>`;
+        ? `<span class="price_up">▲ ${percentChange.toFixed(1)}%</span>`
+        : `<span class="price_down">▼ ${Math.abs(percentChange).toFixed(1)}%</span>`;
     }
   }
 

@@ -83,6 +83,20 @@ html {
 
 /* Prices */
 
+.card_price {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: 1.5rem;
+}
+
+.price_up,
+.price_down {
+  font-size: 0.85rem;
+}
+
 .card_price.has {
   margin-top: 0.3rem;
   color: green;
