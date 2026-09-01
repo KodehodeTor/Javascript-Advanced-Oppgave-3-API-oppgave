@@ -71,17 +71,24 @@ function createSavedCard(card, container) {
 
   let trend = "";
   if (card.price && card.previousPrice && card.price !== card.previousPrice) {
-    const difference = parseFloat(card.price) - parseFloat(card.previousPrice);
-    trend =
-      difference > 0
-        ? `<span class="price_up">▲ €${Math.abs(diff).toFixed(2)}</span>`
-        : `<span class="price_down">▼ €${Math.abs(diff).toFixed(2)}</span>`;
+    const oldPrice = parseFloat(card.previousPrice);
+    const newPrice = parseFloat(card.price);
+
+    // Guard against divide by zero if card was previousoly 0.
+    if (oldPrice > 0) {
+      const percentChange = ((newPrice - oldPrice) / oldPrice) * 100;
+      const isIncrease = percentChange > 0;
+
+      trend = isIncrease
+        ? `<span class="price-up">▲ ${percentChange.toFixed(1)}%</span>`
+        : `<span class="price-down">▼ ${Math.abs(percentChange).toFixed(1)}%</span>`;
+    }
   }
 
   element.innerHTML = `
      <p>${card.name}</p>
         <img src="${card.image}" alt="${card.name}">
-    <p class="card_price ${priceClass}">${priceText}</p>
+    <p class="card_price ${priceClass}">${priceText} ${trend}</p>
         <button data-name="${card.name}" class="remove_btn">Remove</button>
         `;
   container.appendChild(element);
@@ -91,7 +98,7 @@ async function refreshSavedCardPrices() {
   const savedCards = loadedSavedCards();
   const now = Date.now();
 
-  const oldCards = savedCards.filter((c) => {
+  const oldCards = savedCards.filter((card) => {
     const lastChecked = new Date(card.priceDate).getTime();
     return now - lastChecked >= oneDayRefresh;
   });
