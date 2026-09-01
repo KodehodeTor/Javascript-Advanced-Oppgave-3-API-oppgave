@@ -46,6 +46,10 @@ span {
   padding: 0.625rem;
 }
 
+html {
+  scrollbar-gutter: stable both-edges;
+}
+
 /* TITLE */
 #title {
   margin-top: 1.563rem;
