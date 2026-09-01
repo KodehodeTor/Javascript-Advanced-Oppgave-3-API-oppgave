@@ -41,13 +41,13 @@ export function displaySavedCards() {
 
   //Animate cards
   savedCards.forEach((card) => {
-    createSavedCard(card, savedCardCont);
+    createSavedCard(card, savedCardCont, true);
   });
 
   console.log("Creating static cards...");
   //Stationary cards
   savedCards.forEach((card) => {
-    createSavedCard(card, staticCardCont);
+    createSavedCard(card, staticCardCont, false);
   });
 
   console.log(
@@ -62,7 +62,7 @@ export function displaySavedCards() {
 }
 
 //Create saved card
-function createSavedCard(card, container) {
+function createSavedCard(card, container, showTrend = false) {
   const element = document.createElement("div");
   element.className = "saved_card";
 
@@ -70,7 +70,12 @@ function createSavedCard(card, container) {
   const priceText = card.price ? `€${card.price}` : "Price unavailable";
 
   let trend = "";
-  if (card.price && card.previousPrice && card.price !== card.previousPrice) {
+  if (
+    showTrend &&
+    card.price &&
+    card.previousPrice &&
+    card.price !== card.previousPrice
+  ) {
     const oldPrice = parseFloat(card.previousPrice);
     const newPrice = parseFloat(card.price);
 
@@ -126,7 +131,7 @@ async function refreshSavedCardPrices() {
 function startCarousel(savedCards) {
   //Duplicate cards:
   savedCards.forEach((card) => {
-    createSavedCard(card, savedCardCont);
+    createSavedCard(card, savedCardCont, true);
   });
 
   const cards = savedCardCont.querySelectorAll(".saved_card");

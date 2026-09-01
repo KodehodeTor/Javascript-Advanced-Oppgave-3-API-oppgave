@@ -64,6 +64,7 @@
   z-index: 99;
 }
 
+/* Since we duplicate cards, we have disabled button and title. */
 #saved_cards p {
   opacity: 0;
 }

@@ -1,14 +1,17 @@
-NOTES
-
 NOTES & FUTURE PLANS
 
 ## DONE:
 
 Need media query for animated card section as well as static section.✅
-Append prices and last logged in price movement on static cards (over or under?)✅✅
+
+Append prices and last logged in price movement on static cards (over)✅
+
 Need a box on the top where you can save your cards✅
+
 Prices ✅
+
 Card saver (localStorage) ✅
+
 Delete individual cards from the save_box ✅
 
 ## HALF DONE:
@@ -18,11 +21,13 @@ Follow pricing trends in cardmarket.
 
 ---
 
+We can easily append the prices same as static, but we want to append only the trend since last login.
+
 Append prices and last logged in price movement over animated cards.
 
 ---
 
-Half-done bug:
+Half-done bug(Changed font size to fit title :')
 With the way we are appending card names and deleting double face cards name is not optimal. There has been some cards which a part of the name is deleted even when the card is not double sided.
 
 Like "Sheoldred, the apocoplyse" becoming "Sheoldred, the"....
