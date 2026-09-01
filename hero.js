@@ -86,9 +86,10 @@ function createSavedCard(card, container) {
   }
 
   element.innerHTML = `
+   <p class="card_price ${priceClass}">${priceText} ${trend}</p>
      <p>${card.name}</p>
         <img src="${card.image}" alt="${card.name}">
-    <p class="card_price ${priceClass}">${priceText} ${trend}</p>
+   
         <button data-name="${card.name}" class="remove_btn">Remove</button>
         `;
   container.appendChild(element);

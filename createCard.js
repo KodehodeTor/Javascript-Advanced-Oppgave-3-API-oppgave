@@ -44,10 +44,10 @@ export function createCard(cardInfo) {
   div.dataset.price = price || "";
 
   //Apend to html
+  div.appendChild(priceP);
   p.append(textP);
   div.appendChild(p);
   div.appendChild(img);
-  div.appendChild(priceP);
   cardCont.appendChild(div);
 
   //Click to save
