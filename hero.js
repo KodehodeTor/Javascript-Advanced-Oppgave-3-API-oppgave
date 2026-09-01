@@ -87,6 +87,32 @@ function createSavedCard(card, container) {
   container.appendChild(element);
 }
 
+async function refreshSavedCardPrices() {
+  const savedCards = loadedSavedCards();
+  const now = Date.now();
+
+  const oldCards = savedCards.filter((c) => {
+    const lastChecked = new Date(card.priceDate).getTime();
+    return now - lastChecked >= oneDayRefresh;
+  });
+
+  if (oldCards.length === 0) {
+    console.log("All saved cards are up to date");
+    return;
+  }
+
+  console.log(`Refreshing prices for ${oldCards.length} old cards...`);
+
+  for (const card of oldCards) {
+    const newPrice = await fetchCardPrice(card.name);
+    if (newPrice !== null) {
+      updateCardPrice(card.name, newPrice);
+    }
+    await new Promise((resolve) => setTimeout(resolve, 100));
+  }
+  displaySavedCards;
+}
+
 // Start carousel
 
 function startCarousel(savedCards) {
@@ -193,3 +219,4 @@ if (staticCardCont) {
 }
 
 displaySavedCards();
+refreshSavedCardPrices();
