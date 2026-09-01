@@ -80,3 +80,13 @@ html {
   max-width: 100%;
   box-sizing: border-box;
 }
+
+/* Prices */
+
+.card_price.has {
+  color: green;
+}
+
+.card_price.hasnt {
+  color: red;
+}

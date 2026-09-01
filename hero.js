@@ -57,13 +57,15 @@ export function displaySavedCards() {
 //Create saved card
 function createSavedCard(card, container) {
   const element = document.createElement("div");
-
   element.className = "saved_card";
+
+  const priceClass = card.price ? "has" : "hasnt";
+  const priceText = card.price ? `€${card.price}` : "Price unavailable";
 
   element.innerHTML = `
      <p>${card.name}</p>
         <img src="${card.image}" alt="${card.name}">
-       <p class="card_price">${card.price ? `€${card.price}` : "Price unavailable"}</p>
+    <p class="card_price ${priceClass}">${priceText}</p>
         <button data-name="${card.name}" class="remove_btn">Remove</button>
         `;
   container.appendChild(element);
