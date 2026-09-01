@@ -1,10 +1,17 @@
-import { loadedSavedCards, removeCard } from "./localStorage.js";
+import {
+  loadedSavedCards,
+  removeCard,
+  updateCardPrice,
+} from "./localStorage.js";
+import { fetchCardPrice } from "./scryfall.js";
 
 const heroCard = document.querySelector("#hero_card");
 const savedCardCont = document.querySelector("#saved_cards");
 const staticCardCont = document.querySelector("#saved_cards_static");
 console.log("Animated container:", savedCardCont);
 console.log("Static container:", staticCardCont);
+
+const oneDayRefresh = 24 * 60 * 60 * 1000;
 
 export function displayHero(card) {
   if (!heroCard) return;
@@ -61,6 +68,15 @@ function createSavedCard(card, container) {
 
   const priceClass = card.price ? "has" : "hasnt";
   const priceText = card.price ? `€${card.price}` : "Price unavailable";
+
+  let trend = "";
+  if (card.price && card.previousPrice && card.price !== card.previousPrice) {
+    const difference = parseFloat(card.price) - parseFloat(card.previousPrice);
+    trend =
+      difference > 0
+        ? `<span class="price_up">▲ €${Math.abs(diff).toFixed(2)}</span>`
+        : `<span class="price_down">▼ €${Math.abs(diff).toFixed(2)}</span>`;
+  }
 
   element.innerHTML = `
      <p>${card.name}</p>
