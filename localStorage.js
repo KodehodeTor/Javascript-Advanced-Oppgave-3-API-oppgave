@@ -5,13 +5,34 @@ const storage_key = "savedCards";
 //Export for saving card
 export function savedCard(card) {
   const savedCards = loadedSavedCards();
-
   //Checks if there are any duplicates.
   const existingIndex = savedCards.findIndex((c) => c.name === card.name);
+
+  //Time stamp tracking for the 24 hour price refresh.
+  const now = new Date().toISOString();
+
   if (existingIndex !== -1) {
-    savedCards[existingIndex] = card;
+    const existing = savedCards[existingIndex];
+    if (existing.price !== card.price) {
+      savedCards[existingIndex] = {
+        ...card,
+        previousPrice: existing.price,
+        priceDate: now,
+      };
+    } else {
+      savedCards[existingIndex] = {
+        ...existing,
+        ...card,
+        previousPrice: exisiting.previousPrice,
+        priceDate: exisiting.priceDate,
+      };
+    }
   } else {
-    savedCards.push(card);
+    savedCards.push({
+      ...card,
+      previousPrice: null,
+      priceDate: now,
+    });
   }
   localStorage.setItem(storage_key, JSON.stringify(savedCards));
 }
@@ -34,3 +55,5 @@ export function removeCard(cardName) {
   const savedCards = loadedSavedCards().filter((c) => c.name !== cardName);
   localStorage.setItem(storage_key, JSON.stringify(savedCards));
 }
+
+// Updates price on existing saved card, tracking previousPrice for trend. Time gets stamped (PriceDate) so we can refresh if 24 hours have passed.
